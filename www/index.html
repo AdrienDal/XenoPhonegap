@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+   <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inlin e' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="bower_components/framework7/dist/css/my-app.css">
+
+    <link rel="stylesheet" href="bower_components/framework7-icons/css/framework7-icons.css">
+
+    <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.material.colors.min.css">
+
+    <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.ios.min.css">
+    <!-- Path to Framework7 iOS related color styles -->
+    <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.ios.colors.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/xeno.css"/>
+    <title></title>
+</head>
+
+<body class="layout-dark">
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Left panel with reveal effect-->
+<div class="panel panel-left panel-reveal xenofont">
+    <div class="list-block theme-white">
+        <ul>
+            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('index.html');">
+                <div class="item-media"><i class="f7-icons size-18">data</i></div>
+                <div class="item-inner">
+                    <div class="item-title"> ACCUEIL </div>
+                </div>
+            </li>
+            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('mesjeux.html');" >
+                <div class="item-media"><i class="f7-icons size-18">star</i></div>
+                <div class="item-inner">
+                    <div class="item-title"> jeux </div>
+                </div>
+            </li>
+            <li class="item-content animation close-panel" data-force="true">
+                <div class="item-media"><i class="f7-icons size-18">chats</i></div>
+                <div class="item-inner">
+                    <div class="item-title"> Chat </div>
+                </div>
+            </li>
+            <li class="item-content animation close-panel" data-force="true">
+                <div class="item-media"><i class="f7-icons size-18">calendar</i></div>
+                <div class="item-inner">
+                    <div class="item-title"> Évènements </div>
+                </div>
+            </li>
+            <li class="item-content animation close-panel" data-force="true">
+                <div class="item-media"><i class="f7-icons size-18">world</i></div>
+                <div class="item-inner">
+                    <div class="item-title"> Nouveautés </div>
+                </div>
+            </li>
+            <li class="item-content animation close-panel" data-force="true">
+                <div class="item-media"><i class="f7-icons size-18">person</i></div>
+                <div class="item-inner">
+                    <div class="item-title"> Profil </div>
+                </div>
+            </li>
+            <li class="item-content animation close-panel" data-force="true">
+                <div class="item-media"><i class="f7-icons size-18">list</i></div>
+                <div class="item-inner">
+                    <div class="item-title"> Classement </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div data-page="login-screen" class="page no-navbar no-toolbar no-swipeback login-screen modal-in xenofont">
+    <div class="page-content login-screen-content">
+        <div class="login-screen-title"><img id="xenologo" src="img/xenomorphe_logo_white_LD.png"/></div>
+        <form>
+            <p class="buttons-row theme-red">
+                <a href="#" onclick="login('google')"
+                   class="button button-big button-fill"><i class="f7-icons size-22">social_googleplus</i>
+                    Google</a>
+            </p>
+            <p class="buttons-row theme-blue">
+                <a href="#" onclick="login('facebook')"
+                   class="button button-big button-fill "><i class="f7-icons size-22">social_facebook</i>
+                    Facebook</a>
+            </p>
+
+            <div class="list-block-label">
+                <p>Veuillez vous connecter pour accéder aux contenus de l'application.</p>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Views -->
+<div class="views xenofont">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="center sliding">
+                    Xenomorphe App
+                </div>
+                <div class="right">
+                    <a href="#" class="link icon-only open-panel"><i class="icon icon-bars color-white"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page">
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="card">
+                        <div class="card-header col-50">Bienvenue !</div>
+
+                        <div class="card-content">
+                            <div class="list-block media-list">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                           <img id="imgUser" src="" width="44"/>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div id="nameUser" class="item-title"></div>
+                                                <div class="item-after" onClick="logout();">Logout</div>
+                                            </div>
+                                            <div id="viaUser" class="item-subtitle"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="pageIndex" class="list-block inset">
+                        <ul>
+                            <li>
+                                <span class="buttons-row">
+                                    <a onClick="mainView.router.loadPage('mesjeux.html');" data-force="true" href="#" style="height : 80px;padding-top: 20px;" class="button button-raised button-fill color-green"><i class="f7-icons size-15">star</i> jeux </a>
+                                    <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-teal"><i class="f7-icons size-15">chats</i> Chat</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="buttons-row">
+                                    <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-pink"><i class="f7-icons size-15">calendar</i> évènements</a>
+                                    <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-blue"><i class="f7-icons size-15">world</i> Nouveautés</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="buttons-row">
+                                    <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-orange"><i class="f7-icons size-15">person</i> Profil </a>
+                                    <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-brown"><i class="f7-icons size-15">list</i> Classement</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="bower_components/hello/dist/hello.all.js"></script>
+<script type="text/javascript" src="bower_components/framework7/dist/js/framework7.min.js"></script>
+<script type="text/javascript" src="bower_components/framework7/dist/js/my-app.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+
+<script type="text/javascript">
+    app.initialize();
+    var mainView;
+    var user;
+    var myApp = new Framework7({
+        swipePanel: 'left',
+
+    });
+
+    var $$ = Dom7;
+    mainView = myApp.addView('.view-main', {
+         dynamicNavbar: true
+     });
+
+    hello.init({
+        google: '656984324806-sr0q9vq78tlna4hvhlmcgp2bs2ut8uj8.apps.googleusercontent.com',
+        facebook: '198728560590653'
+    }, {
+        redirect_uri: 'https://adodson.com/hello.js/redirect.html'
+    });
+
+    if (localStorage.getItem('user') != 'undefined' ) {
+        initIndexPage ()
+        myApp.closeModal('.login-screen');
+    }
+
+    function logout() {
+        user = "";
+        hello(user.connexion).logout().then(function() {
+            alert('Signed out');
+        }, function(e) {
+            alert('Signed out');
+        });
+        myApp.loginScreen();
+    }
+
+    function login(network) {
+        var hi = hello(network);
+        hi.login().then(function (r) {
+                return hi.api('me').then(function (json) {
+                    user = json;
+                    user.connexion = network;
+                    localStorage.setItem('user',JSON.stringify(user));
+                    initIndexPage();
+                    myApp.closeModal('.login-screen');
+                }, function (e) {
+                    alert('Whoops! ' + e.error.message);
+                });
+            })
+    }
+
+    myApp.onPageInit('index', function (page) {
+        initIndexPage ();
+    });
+
+    function initIndexPage () {
+        user = JSON.parse(localStorage.getItem('user'));
+        $("#nameUser").html(user.name);
+        $("#imgUser").prop('src', user.thumbnail);
+        $("#viaUser").html("via " + user.connexion);
+    }
+
+
+</script>
+<script src="js/mesjeux.js" type="text/javascript"></script>
+</body>
+
+</html>
