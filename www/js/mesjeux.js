@@ -3,28 +3,31 @@ myApp.onPageInit('mesjeux', function (page) {
 });
 
 function initMesJeuxPage () {
-    var apiHost = 'http://adrien.dallinge.ch/cave/wp-json';
-    $.get(apiHost + '/wp/v2/xenogame?per_page=1000')
-        .then(function (response) {
+    $.ajax({
+        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/jeux',
+        type: 'GET',
+        dataType: 'json',
+        beforeSend: setHeader
+    }).done(function(response) {
             $("#listViewJeux").fadeIn();
             $("#loader").remove();
             $.each(response,function() {
                 var fav;
                 var star = ""
-                var addOrRemove ="<a href='#' onClick='addToFavorite($(this).parent().parent())' class='bg-green'>Ajouter aux favoris</a>"
-                Math.random() > 0.5 ? fav = "" :
+                var addOrRemove ="<a href='#' onClick='addToFavorite($(this).parent().parent())' class='bg-green'>Ajouter aux favoris</a>";
+                (!$(this)[0].favoris)  ? fav = "" :
                     (fav = "fav",
                         star ="<i class='f7-icons size-10'>star_fill</i>",
                         addOrRemove = "<a href='#' onClick='delFromFavorite($(this).parent().parent())' class='bg-red'>Supprimer des favoris</a>");
                 $("#listViewJeux").append("" +
-                    "<li class='swipeout "+fav+"'>" +
+                    "<li class='swipeout "+fav+"' tag='"+$(this)[0].ID+"'>" +
                         "<a class='item-link swipeout-content item-content'>" +
                             "<div class='item-media'>" +
                                 "<img src='"+$(this)[0].featured_image_thumbnail_url+"' width='80' max-height='70'/>" +
                             "</div>" +
                             "<div class='item-inner'>" +
                                 "<div class='item-title-row'>" +
-                                    "<div class='item-title'>"+$(this)[0].title.rendered+"</div>" +
+                                    "<div class='item-title'>"+$(this)[0].post_title+"</div>" +
                                     "<div class='item-after'>"+star+"</div>" +
                                 "</div>" +
                             "</div>" +
@@ -36,10 +39,17 @@ function initMesJeuxPage () {
                         "</div>" +
                     "</li>");
             })
+        showOrHideFavJeux(true)
         })
 };
 
 function addToFavorite(li) {
+    $.ajax({
+        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/addfav',
+        type: 'POST',
+        data : {jeuId : li.attr('tag')},
+        beforeSend: setHeader
+    });
     li.addClass("fav");
     li.find('.item-title-row').append("<i class='f7-icons size-10'>star_fill</i>");
     var swipeAction = li.find('.swipeout-actions-right a');
@@ -50,6 +60,12 @@ function addToFavorite(li) {
 }
 
 function delFromFavorite(li) {
+    $.ajax({
+        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/remfav',
+        type: 'POST',
+        data : {jeuId : li.attr('tag')},
+        beforeSend: setHeader
+    });
     li.removeClass("fav");
     li.find('.item-title-row').find('i').remove();
     if ($(".favBtn").first().hasClass("active"))
@@ -61,16 +77,16 @@ function delFromFavorite(li) {
     swipeAction.addClass('bg-green');
 }
 
-function showOrHideFav(favoris) {
+function showOrHideFavJeux(favoris,btn) {
     if (favoris) {
-        $(".favBtn").first().addClass("active");
-        $(".favBtn").last().removeClass("active");
+        $("#favJeux").addClass("active");
+        $("#tousJeux").removeClass("active");
         $("#listViewJeux li:not('.fav')").each(function() {
             $(this).fadeOut();
         })
     }else {
-        $(".favBtn").first().removeClass("active");
-        $(".favBtn").last().addClass("active");
+        $("#favJeux").removeClass("active");
+        $("#tousJeux").addClass("active");
         $("#listViewJeux li").each(function() {
             $(this).fadeIn();
         })

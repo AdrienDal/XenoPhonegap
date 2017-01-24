@@ -241,12 +241,16 @@
         initIndexPage ();
     });
 
+
+    $$(document).on('page:init', function (e) {
+        initIndexPage ();
+    });
+
     function setHeader(xhr){
         xhr.setRequestHeader('Authorization',user.token);
     }
 
     function initIndexPage () {
-        alert("ça plante ou pas ?");
         $.ajax({
             url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/me',
             type: 'GET',
