@@ -79,7 +79,7 @@
         </ul>
     </div>
 </div>
-<div data-page="login-screen" class="page no-navbar no-toolbar no-swipeback login-screen xenofont">
+<div data-page="login-screen" class="page no-navbar no-toolbar no-swipeback login-screen xenofont modal-in">
     <div class="page-content login-screen-content">
         <div class="login-screen-title"><img id="xenologo" src="img/xenomorphe_logo_white_LD.png"/></div>
         <form>
@@ -202,12 +202,14 @@
     });
 
     if (localStorage.getItem('user') != 'undefined' ) {
+        user = JSON.parse(localStorage.getItem('user'));
         initIndexPage ()
         myApp.closeModal('.login-screen');
     }
 
     function logout() {
         user = "";
+        localStorage.removeItem('user');
         hello(user.connexion).logout().then(function() {
             alert('Signed out');
         }, function(e) {
@@ -222,9 +224,13 @@
                 return hi.api('me').then(function (json) {
                     user = json;
                     user.connexion = network;
-                    localStorage.setItem('user',JSON.stringify(user));
-                    initIndexPage();
-                    myApp.closeModal('.login-screen');
+                    $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", { facebookId: (user.connexion == 'facebook') ? user.id : "", googleId:  ((user.connexion == 'google')  ? user.id  : ""), name :  user.name, thumbnail : user.thumbnail },
+                        function(reponse) {
+                            user.token = reponse;
+                            localStorage.setItem('user',JSON.stringify(user));
+                            initIndexPage();
+                            myApp.closeModal('.login-screen');
+                    })
                 }, function (e) {
                     alert('Whoops! ' + e.error.message);
                 });
@@ -235,11 +241,29 @@
         initIndexPage ();
     });
 
+
+    $$(document).on('page:init', function (e) {
+        initIndexPage ();
+    });
+
+    function setHeader(xhr){
+        xhr.setRequestHeader('Authorization',user.token);
+    }
+
     function initIndexPage () {
-        user = JSON.parse(localStorage.getItem('user'));
-        $("#nameUser").html(user.name);
-        $("#imgUser").prop('src', user.thumbnail);
-        $("#viaUser").html("via " + user.connexion);
+        $.ajax({
+            url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/me',
+            type: 'GET',
+            dataType: 'json',
+            beforeSend: setHeader
+        }).done(function( data ) {
+            user.name = data.name;
+            user.thumbnail = data.thumbnail;
+            user.connexion = data.connexion;
+            $("#nameUser").html(user.name);
+            $("#imgUser").prop('src', user.thumbnail);
+            $("#viaUser").html("via " + user.connexion);
+        });
     }
 
 
