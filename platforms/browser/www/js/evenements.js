@@ -52,7 +52,6 @@ function initEvenementsPage () {
                                     "<div class='item-title'>"+$(this)[0].post_title+"</div>" +
                                     "<div class='item-after'>"+star+"</div>" +
                                 "</div>" +
-                               
                             "<div class='item-subtitle'>"+convertDate(date)+"</div>" +
                             "<div class='item-text'>"+date.getHours()+":"+pad(date.getMinutes())+"</div>" +
                             "</div>" +
