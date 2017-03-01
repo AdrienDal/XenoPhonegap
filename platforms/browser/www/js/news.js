@@ -14,17 +14,10 @@ function initNewsDetailsPage(id) {
         });
 }
 
-function pad(n){return n<10 ? '0'+n : n}
-
-function convertDate(date) {
-    var months = Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Decembre");
-    var jours=Array(" ","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche");
-    return jours[date.getDay()]+" "+date.getDate()+" "+months[date.getMonth()]+" "+date.getFullYear();
-}
 
 function initNewsPage () {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/wp/v2/posts?',
+        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/news?',
         type: 'GET',
         dataType: 'json',
         beforeSend: setHeader
@@ -32,17 +25,18 @@ function initNewsPage () {
             $("#listViewNews").fadeIn();
             $("#loader").remove();
             $.each(response,function() {
-            	var subtitle=$(this)[0].excerpt.rendered;
+                var d = Date.parse("2016-11-21 15:29:44");
+                var subtitle=$(this)[0].post_content;
             	var subtitleGood=subtitle.slice(0,70);
-                $("#listViewNews").append("" +
-                           "<div onClick=\"mainView.router.loadPage('newsDetails.html?id="+$(this)[0].id+"');\" class='item-link card demo-card-header-pic'>" +
-                         				   "<div style='background-image:url();background-color : green;' valign='bottom' class='card-header color-white no-border'>"+$(this)[0].title.rendered+"</div>"+
- 										 "<div class='card-content'>"+
-   										 "<div class='card-content-inner'>"+
-      											"<p class='color-gray'>"+$(this)[0].date+"</p>"+
-      											"<p>"+subtitleGood+"...</p>"+
- 									   "</div>" +
-									   "</div>" +
+                $("#listViewNews").prepend("" +
+                    "<div onClick=\"mainView.router.loadPage('newsDetails.html?id="+$(this)[0].ID+"');\" class='item-link card demo-card-header-pic'>" +
+                        "<div style='background-image:url("+$(this)[0].featured_image_thumbnail_url+");  valign='bottom' class='card-header color-white no-border'></div>"+
+                             "<div class='card-content'>"+
+                             "<div class='card-content-inner'>"+
+                                    "<p class='color-gray'>"+$(this)[0].post_date+"</p>"+
+                                    "<p>"+$(this)[0].post_title+"</p>"+
+                             "</div>" +
+                        "</div>" +
 					"</div>" 
                     );
             })

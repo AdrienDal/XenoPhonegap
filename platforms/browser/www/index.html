@@ -25,7 +25,7 @@
     <title></title>
 </head>
 
-<body class="layout-dark">
+<body class="layout-gray">
 <!-- Status bar overlay for full screen mode (PhoneGap) -->
 <div class="statusbar-overlay"></div>
 <!-- Panels overlay-->
@@ -184,6 +184,7 @@
     app.initialize();
     var mainView;
     var user;
+    var apiHost = "http://adrien.dallinge.ch/cave/wp-json";
     var myApp = new Framework7({
         swipePanel: 'left',
 
@@ -268,6 +269,7 @@
 
 
 </script>
+<script src="js/fonctions.js" type="text/javascript"></script>
 <script src="js/mesjeux.js" type="text/javascript"></script>
 <script src="js/evenements.js" type="text/javascript"></script>
 <script src="js/news.js" type="text/javascript"></script>

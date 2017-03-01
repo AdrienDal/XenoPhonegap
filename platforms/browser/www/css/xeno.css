@@ -73,3 +73,18 @@
     background-size: cover;
     background-position: center;
   }
+
+  #listViewJeux img {
+      max-height : 50px;
+      width : auto;
+  }
+
+  #textNews img{
+      max-width : 90%;
+      height:auto;
+  }
+
+ #textEvents img{
+     max-width : 90%;
+     height:auto;
+ }
