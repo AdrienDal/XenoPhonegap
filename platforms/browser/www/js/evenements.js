@@ -14,6 +14,8 @@ function initEvenementsDetailsPage(id) {
 			$('#dateEvent').html(convertDate(date)+" "+date.getHours()+":"+pad(date.getMinutes()));
             $('#imgEvent').prop('src',response.featured_image);
             $('#textEvent').append(response.content.rendered);
+            $("#linkViewList").attr("onClick","mainView.router.loadPage('listeInscriptions.html?id="+id+"')");
+            
         });
 }
 
@@ -51,6 +53,7 @@ function initEvenementsPage () {
                          "</li>"
                     );
             })
+            
            showOrHideFavEv(true);
         })
 };

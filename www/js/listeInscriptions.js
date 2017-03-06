@@ -1,19 +1,21 @@
-myApp.onPageInit('inscriptionslist', function (page) {
-    initlisteInscriptionPage();
+myApp.onPageInit('listeInscriptions', function (page) {
+    initlisteInscriptionPage(page.query.id);
 });
 
 
-function initEvenementsPage (idevent) {
+function initlisteInscriptionPage (id) {
     $.ajax({
         url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/listeinscritevent',
         type: 'POST',
         dataType: 'json',
-        data:{event:idevent},
+        data:{"event":id},
         beforeSend: setHeader
     }).done(function(response) {
-            $("#listInscription").fadeIn();
-            $("#loader").remove();
-            $("#titreInscription").append(""+$(this)[0].post_title +" "+$(this)[0].length()+" Inscripts" );
+    	var nb=0;
+    	if (typeof $(this)[1]!=="undefined"){
+    	nb=$(this).length}else {
+    	nb=0;}
+            $("#titreInscription").append("Liste des participants   - <span class='badge'>"+nb+"</span> inscrits");
             $.each(response,function() {
              $("#listInscription").append("" +
              			"<li>" +
@@ -24,5 +26,8 @@ function initEvenementsPage (idevent) {
         "</div>"+
       "</div>"+
    "</li>"
-   
+ );
    });
+});
+
+}
