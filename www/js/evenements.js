@@ -70,3 +70,10 @@ function showOrHideFavEv(favoris) {
         })
     }
 }
+
+function inscription(){
+	 $("#btnInscription").removeClass("color-green");
+	 $("#btnInscription").addClass= ("color-red");
+
+
+}
