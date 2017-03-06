@@ -1,5 +1,5 @@
 myApp.onPageInit('evenements', function (page) {
-    initEvenementsPage ();
+    initEvenementsPage();
 });
 
 myApp.onPageInit('evenementsDetails',function (page) {

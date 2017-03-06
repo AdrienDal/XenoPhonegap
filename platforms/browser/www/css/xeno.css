@@ -29,6 +29,19 @@
     padding: 15px 10px;
   }
 
+
+  .fb-custom {
+      margin-left: 5px;
+      font-size: 14px;
+      font-weight: 500;
+  }
+
+  .fb-date-custom {
+      margin-left: 5px;
+      font-size: 13px;
+      color: #8e8e93;
+  }
+
  #xenologo {
     width : 100%;
 }
@@ -83,4 +96,10 @@
  #textEvents img{
      max-width : 90%;
      height:auto;
+ }
+
+ #imgJeu {
+     max-height: 80px;
+     padding-right : 8px;
+     width : auto;
  }

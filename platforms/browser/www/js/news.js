@@ -9,7 +9,7 @@ function initNewsDetailsPage(id) {
 		var apiHost = 'http://adrien.dallinge.ch/cave/wp-json';
         $.get(apiHost + '/wp/v2/posts/'+id).then(function (response) {
 			$('#nomNews').html(response.title.rendered);
-			$('#dateNews').html(response.date);
+			$('#dateNews').html(convertDate(new Date(response.date)));
             $('#textNews').append(response.content.rendered);
         });
 }
@@ -25,7 +25,7 @@ function initNewsPage () {
             $("#listViewNews").fadeIn();
             $("#loader").remove();
             $.each(response,function() {
-                var d = Date.parse("2016-11-21 15:29:44");
+                var date=new Date($(this)[0].customDate);
                 var subtitle=$(this)[0].post_content;
             	var subtitleGood=subtitle.slice(0,70);
                 $("#listViewNews").prepend("" +
@@ -33,7 +33,7 @@ function initNewsPage () {
                         "<div style='background-image:url("+$(this)[0].featured_image_thumbnail_url+");  valign='bottom' class='card-header color-white no-border'></div>"+
                              "<div class='card-content'>"+
                              "<div class='card-content-inner'>"+
-                                    "<p class='color-gray'>"+$(this)[0].post_date+"</p>"+
+                                    "<p class='color-gray'>"+convertDate(date)+"</p>"+
                                     "<p>"+$(this)[0].post_title+"</p>"+
                              "</div>" +
                         "</div>" +
