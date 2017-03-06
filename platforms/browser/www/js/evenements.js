@@ -79,3 +79,10 @@ function showOrHideFavEv(favoris) {
         })
     }
 }
+
+function inscription(){
+	
+	this.style.backgroundColor = 'Red';
+
+
+}
