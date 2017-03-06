@@ -72,8 +72,8 @@ function showOrHideFavEv(favoris) {
 }
 
 function inscription(){
-	
-	this.style.backgroundColor = 'Red';
+	 $("#btnInscription").removeClass("color-green");
+	 $("#btnInscription").addClass= ("color-red");
 
 
 }
