@@ -15,6 +15,7 @@ function initEvenementsDetailsPage(id) {
             $('#imgEvent').prop('src',response.featured_image);
             $('#textEvent').append(response.content.rendered);
             $("#linkViewList").attr("onClick","mainView.router.loadPage('listeInscriptions.html?id="+id+"')");
+            $("#linkViewList").attr('tag', id);
             
         });
 }
@@ -75,13 +76,30 @@ function showOrHideFavEv(favoris) {
 }
 
 function inscription(){
-	 $("#btnInscription").toggleClass("color-green");
-	 $("#btnInscription").toggleClass("color-red");
-	 $("#btnInscription").toggleClass("button-fill");
-	 if ( document.getElementById('btnInscription').innerHTML=="se désinscrire") {
-    	document.getElementById('btnInscription').innerHTML="s'inscrire";
+    var btnInscription =  $("#btnInscription");
+    btnInscription.toggleClass("color-green");
+    btnInscription.toggleClass("color-red");
+    btnInscription.toggleClass("button-fill");
+    var idEvent = $("#linkViewList").attr('tag');
+    btnInscription = document.getElementById('btnInscription');
+	 if ( btnInscription.innerHTML=="se désinscrire") {
+         $.ajax({
+             url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/inscription',
+             type: 'POST',
+             dataType: 'json',
+             data:{"event": idEvent},
+             beforeSend: setHeader
+         });
+         btnInscription.innerHTML="s'inscrire";
 	 }else{
-		document.getElementById('btnInscription').innerHTML="se désinscrire";
+         $.ajax({
+             url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/desinscription',
+             type: 'POST',
+             dataType: 'json',
+             data: {"event": idEvent},
+             beforeSend: setHeader
+         });
+         btnInscription.innerHTML = "se désinscrire";
 	 }
 
 	 
