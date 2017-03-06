@@ -72,8 +72,15 @@ function showOrHideFavEv(favoris) {
 }
 
 function inscription(){
-	 $("#btnInscription").removeClass("color-green");
-	 $("#btnInscription").addClass= ("color-red");
+	 $("#btnInscription").toggleClass("color-green");
+	 $("#btnInscription").toggleClass("color-red");
+	 $("#btnInscription").toggleClass("button-fill");
+	 if ( document.getElementById('btnInscription').innerHTML=="se désinscrire") {
+    	document.getElementById('btnInscription').innerHTML="s'inscrire";
+	 }else{
+		document.getElementById('btnInscription').innerHTML="se désinscrire";
+	 }
 
+	 
 
 }
