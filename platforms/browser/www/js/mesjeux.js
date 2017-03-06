@@ -2,6 +2,21 @@ myApp.onPageInit('mesjeux', function (page) {
     initMesJeuxPage ();
 });
 
+myApp.onPageInit('jeuxDetails',function (page) {
+    initJeuxDetailsPage(page.query.id,page.query.favdetail);
+});
+
+function initJeuxDetailsPage(id,favdetail) {
+    var apiHost = 'http://adrien.dallinge.ch/cave/wp-json';
+    $.get(apiHost + '/wp/v2/xenogame/'+id).then(function (response) {
+        $('#nomJeu').html(response.title.rendered);
+        $('#infoJeu').html("Joueur(s) : de "+response.player_min+ " à "+response.player_max);
+        $('#imgJeu').prop('src',response.featured_image);
+        $('#textJeu').append(response.content.rendered+"<li id='liJeu' tag='"+response.id+"' style='display : none;'></li>");
+        //$('#checkFavoris').prop('checked',favdet);
+    });
+}
+
 function initMesJeuxPage () {
     $.ajax({
         url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/jeux',
@@ -21,7 +36,7 @@ function initMesJeuxPage () {
                         addOrRemove = "<a href='#' onClick='delFromFavorite($(this).parent().parent())' class='bg-red'>Supprimer des favoris</a>");
                 $("#listViewJeux").append("" +
                     "<li class='swipeout "+fav+"' tag='"+$(this)[0].ID+"'>" +
-                        "<a class='item-link swipeout-content item-content'>" +
+                        "<a onClick=\"mainView.router.loadPage('jeuxDetails.html?id="+$(this)[0].ID+"&favdetail="+$(this)[0].favoris+"');\" class='item-link swipeout-content item-content'>" +
                             "<div class='item-media'>" +
                                 "<img src='"+$(this)[0].featured_image_thumbnail_url+"' width='80' max-height='70'/>" +
                             "</div>" +
@@ -92,3 +107,12 @@ function showOrHideFavJeux(favoris,btn) {
         })
     }
 }
+
+/*
+function checkboxFavoris(li) {
+    if ($("#checkFavoris").is(':checked')) {
+        addToFavorite(li);
+    }else {
+        delFromFavorite(li);
+    }
+}*/

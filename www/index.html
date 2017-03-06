@@ -25,14 +25,14 @@
     <title></title>
 </head>
 
-<body class="layout-dark">
+<body class="layout-gray theme-red">
 <!-- Status bar overlay for full screen mode (PhoneGap) -->
 <div class="statusbar-overlay"></div>
 <!-- Panels overlay-->
 <div class="panel-overlay"></div>
 <!-- Left panel with reveal effect-->
 <div class="panel panel-left panel-reveal xenofont">
-    <div class="list-block theme-white">
+    <div class="list-block">
         <ul>
             <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('index.html');">
                 <div class="item-media"><i class="f7-icons size-18">data</i></div>
@@ -46,7 +46,7 @@
                     <div class="item-title"> jeux </div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true">
+            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('listechats.html');">
                 <div class="item-media"><i class="f7-icons size-18">chats</i></div>
                 <div class="item-inner">
                     <div class="item-title"> Chat </div>
@@ -58,13 +58,13 @@
                     <div class="item-title"> Évènements </div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true">
+            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('news.html');">
                 <div class="item-media"><i class="f7-icons size-18">world</i></div>
                 <div class="item-inner">
                     <div class="item-title"> Nouveautés </div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true">
+            <li class="item-content animation close-panel" data-force="true"  onClick="mainView.router.loadPage('profil.html');">
                 <div class="item-media"><i class="f7-icons size-18">person</i></div>
                 <div class="item-inner">
                     <div class="item-title"> Profil </div>
@@ -111,7 +111,7 @@
                     Xenomorphe App
                 </div>
                 <div class="right">
-                    <a href="#" class="link icon-only open-panel"><i class="icon icon-bars color-white"></i></a>
+                    <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
                 </div>
             </div>
         </div>
@@ -149,18 +149,18 @@
                             <li>
                                 <span class="buttons-row">
                                     <a onClick="mainView.router.loadPage('mesjeux.html');" data-force="true" href="#" style="height : 80px;padding-top: 20px;" class="button button-raised button-fill color-green"><i class="f7-icons size-15">star</i> jeux </a>
-                                    <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-teal"><i class="f7-icons size-15">chats</i> Chat</a>
+                                    <a  onClick="mainView.router.loadPage('listechats.html');" href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-teal"><i class="f7-icons size-15">chats</i> Chat</a>
                                 </span>
                             </li>
                             <li>
                                 <span class="buttons-row">
                                     <a onClick="mainView.router.loadPage('evenements.html');" href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-pink"><i class="f7-icons size-15">calendar</i> évènements</a>
-                                    <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-blue"><i class="f7-icons size-15">world</i> Nouveautés</a>
+                                    <a onClick="mainView.router.loadPage('news.html');"  href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-blue"><i class="f7-icons size-15">world</i> Nouveautés</a>
                                 </span>
                             </li>
                             <li>
                                 <span class="buttons-row">
-                                    <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-orange"><i class="f7-icons size-15">person</i> Profil </a>
+                                    <a onClick="mainView.router.loadPage('profil.html');" href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-orange"><i class="f7-icons size-15">person</i> Profil </a>
                                     <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-brown"><i class="f7-icons size-15">list</i> Classement</a>
                                 </span>
                             </li>
@@ -184,6 +184,7 @@
     app.initialize();
     var mainView;
     var user;
+    var apiHost = "http://adrien.dallinge.ch/cave/wp-json";
     var myApp = new Framework7({
         swipePanel: 'left',
 
@@ -268,8 +269,12 @@
 
 
 </script>
+<script src="js/fonctions.js" type="text/javascript"></script>
 <script src="js/mesjeux.js" type="text/javascript"></script>
 <script src="js/evenements.js" type="text/javascript"></script>
+<script src="js/news.js" type="text/javascript"></script>
+<script src="js/profil.js" type="text/javascript"></script>
+<script src="js/chats.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 myApp.onPageInit('evenements', function (page) {
-    initEvenementsPage ();
+    initEvenementsPage();
 });
 
 myApp.onPageInit('evenementsDetails',function (page) {
@@ -15,14 +15,6 @@ function initEvenementsDetailsPage(id) {
             $('#imgEvent').prop('src',response.featured_image);
             $('#textEvent').append(response.content.rendered);
         });
-}
-
-function pad(n){return n<10 ? '0'+n : n}
-
-function convertDate(date) {
-    var months = Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Decembre");
-    var jours=Array(" ","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche");
-    return jours[date.getDay()]+" "+date.getDate()+" "+months[date.getMonth()]+" "+date.getFullYear();
 }
 
 function initEvenementsPage () {
@@ -52,7 +44,6 @@ function initEvenementsPage () {
                                     "<div class='item-title'>"+$(this)[0].post_title+"</div>" +
                                     "<div class='item-after'>"+star+"</div>" +
                                 "</div>" +
-                               
                             "<div class='item-subtitle'>"+convertDate(date)+"</div>" +
                             "<div class='item-text'>"+date.getHours()+":"+pad(date.getMinutes())+"</div>" +
                             "</div>" +
