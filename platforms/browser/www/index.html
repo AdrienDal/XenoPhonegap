@@ -25,7 +25,7 @@
     <title></title>
 </head>
 
-<body class="layout-gray theme-red">
+<body class="layout-gray">
 <!-- Status bar overlay for full screen mode (PhoneGap) -->
 <div class="statusbar-overlay"></div>
 <!-- Panels overlay-->
@@ -79,18 +79,18 @@
         </ul>
     </div>
 </div>
-<div data-page="login-screen" class="page no-navbar no-toolbar no-swipeback login-screen xenofont modal-in">
-    <div class="page-content login-screen-content">
+<div data-page="login-screen" class="page no-navbar no-toolbar no-swipeback login-screen xenofont modal-in layout-dark">
+    <div class="page-content login-screen-content layout-dark">
         <div class="login-screen-title"><img id="xenologo" src="img/xenomorphe_logo_white_LD.png"/></div>
         <form>
-            <p class="buttons-row theme-red">
+            <p class="buttons-row ">
                 <a href="#" onclick="login('google')"
-                   class="button button-big button-fill"><i class="f7-icons size-22">social_googleplus</i>
+                   class="button button-big button-fill theme-red"><i class="f7-icons size-22">social_googleplus</i>
                     Google</a>
             </p>
-            <p class="buttons-row theme-blue">
+            <p class="buttons-row ">
                 <a href="#" onclick="login('facebook')"
-                   class="button button-big button-fill "><i class="f7-icons size-22">social_facebook</i>
+                   class="button button-big button-fill theme-blue "><i class="f7-icons size-22">social_facebook</i>
                     Facebook</a>
             </p>
 
@@ -107,6 +107,11 @@
         <!-- Top Navbar-->
         <div class="navbar">
             <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link icon-only" onclick="mainView.router.back();">
+                        <i class="icon icon-back"></i>
+                    </a>
+                </div>
                 <div class="center sliding">
                     Xenomorphe App
                 </div>

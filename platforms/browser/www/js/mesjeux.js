@@ -24,8 +24,6 @@ function initMesJeuxPage () {
         dataType: 'json',
         beforeSend: setHeader
     }).done(function(response) {
-            $("#listViewJeux").fadeIn();
-            $("#loader").remove();
             $.each(response,function() {
                 var fav;
                 var star = ""
@@ -54,6 +52,8 @@ function initMesJeuxPage () {
                         "</div>" +
                     "</li>");
             })
+        $("#loader").remove();
+        $("#listViewJeux").fadeIn();
         showOrHideFavJeux(true)
         })
 };

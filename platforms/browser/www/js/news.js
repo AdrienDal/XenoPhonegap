@@ -22,8 +22,6 @@ function initNewsPage () {
         dataType: 'json',
         beforeSend: setHeader
     }).done(function(response) {
-            $("#listViewNews").fadeIn();
-            $("#loader").remove();
             $.each(response,function() {
                 var date=new Date($(this)[0].customDate);
                 var subtitle=$(this)[0].post_content;
@@ -40,6 +38,8 @@ function initNewsPage () {
 					"</div>" 
                     );
             })
+            $("#loader").remove();
+            $("#listViewNews").fadeIn();
         })
         
 }

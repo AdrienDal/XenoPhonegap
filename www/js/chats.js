@@ -2,6 +2,19 @@ myApp.onPageInit('listechats', function (page) {
     initListeChatsPage ();
 });
 
+myApp.onPageInit('chats', function(page){
+    initChatsPage();
+});
+
+function initChatsPage(){
+    var myMessages = myApp.messages('.messages', {
+        autoLayout: true
+    });
+
+
+
+}
+
 function initListeChatsPage () {
     $.ajax({
         url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/jeux',
@@ -9,14 +22,12 @@ function initListeChatsPage () {
         dataType: 'json',
         beforeSend: setHeader
     }).done(function(response) {
-        $("#listViewChats").fadeIn();
-        $("#loader").remove();
         $.each(response,function() {
             var fav;
             (!$(this)[0].favoris) ? fav = "" :
                 fav = "fav";
             $("#listViewChats").append("" +
-                "<li class='"+fav+"' >" +
+                "<li class='"+fav+"' onClick=\"mainView.router.loadPage('chats.html?')\">" +
                     "<a class='item-link item-content'>" +
                         "<div class='item-media'>" +
                             "<img src='"+$(this)[0].featured_image_thumbnail_url+"' width='80' max-height='70'/>" +
@@ -33,6 +44,8 @@ function initListeChatsPage () {
                 "</li>"
             );
         })
+        $("#loader").remove();
+        $("#listViewChats").fadeIn();
         showOrHideFavChats(true);
     })
 };

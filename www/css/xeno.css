@@ -83,6 +83,10 @@
     background-position: center;
   }
 
+  .custom-listView{
+      margin-top : 0px;
+  }
+
   #listViewJeux img {
       max-height : 50px;
       width : auto;
@@ -103,3 +107,10 @@
      padding-right : 8px;
      width : auto;
  }
+
+ .inscrit {
+     background-color: palegreen;
+    /* border : green dashed 1px */
+ }
+
+ .size-18 { font-size: 18px; padding-left : 3px; }

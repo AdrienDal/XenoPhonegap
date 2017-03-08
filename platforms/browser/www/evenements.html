@@ -1,15 +1,14 @@
 <div data-page="evenements" class="page">
     <div class="page-content">
         <p class="buttons-row theme-gray">
-            <a href="#" class="button button-round favBtn "  id="favEvents" onClick="showOrHideFavEv(true)">Favoris</a>
-            <a href="#" class="button button-round active favBtn " id="tousEvents" onClick="showOrHideFavEv(false)">Tous</a>
+            <a href="#" class="button favBtn "  id="favEvents" onClick="showOrHideFavEv(true)">Favoris</a>
+            <a href="#" class="button active favBtn " id="tousEvents" onClick="showOrHideFavEv(false)">Tous</a>
         </p>
-        <div class="list-block media-list">
-            <div id="loader" class="col-25">
-                <span style="width:42px; height:42px" class="preloader"></span>
-            </div>
+        <div class="list-block media-list custom-listView">
+            <p id="loader" ><span class="progressbar-infinite"></span></p>
             <ul id="listViewEvents">
             </ul>
         </div>
     </div>
 </div>
+
