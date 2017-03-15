@@ -1,41 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/www/index.html" description="&#10;" line="284" />
+    <bookmark url="file://$PROJECT_DIR$/www/index.html" description="&#10;" line="276" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0eb789cf-ae93-441c-a62a-ad47f3dab401" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/chats.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/evenementsInscriptions.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/browser/www/js/listeInscriptions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/browser/www/listeInscriptions.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/listeInscriptions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/listeInscriptions.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/chats.html" afterPath="$PROJECT_DIR$/platforms/browser/www/chats.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/css/xeno.css" afterPath="$PROJECT_DIR$/platforms/browser/www/css/xeno.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/evenements.html" afterPath="$PROJECT_DIR$/platforms/browser/www/evenements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/evenementsDetails.html" afterPath="$PROJECT_DIR$/platforms/browser/www/evenementsDetails.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/jeuxDetails.html" afterPath="$PROJECT_DIR$/platforms/browser/www/jeuxDetails.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/chats.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/chats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/evenements.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/evenements.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/mesjeux.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/mesjeux.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/news.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/news.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/listechats.html" afterPath="$PROJECT_DIR$/platforms/browser/www/listechats.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/mesjeux.html" afterPath="$PROJECT_DIR$/platforms/browser/www/mesjeux.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/news.html" afterPath="$PROJECT_DIR$/platforms/browser/www/news.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/chats.html" afterPath="$PROJECT_DIR$/www/chats.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/xeno.css" afterPath="$PROJECT_DIR$/www/css/xeno.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/evenements.html" afterPath="$PROJECT_DIR$/www/evenements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/evenementsDetails.html" afterPath="$PROJECT_DIR$/www/evenementsDetails.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/jeuxDetails.html" afterPath="$PROJECT_DIR$/www/jeuxDetails.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/chats.js" afterPath="$PROJECT_DIR$/www/js/chats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/evenements.js" afterPath="$PROJECT_DIR$/www/js/evenements.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/mesjeux.js" afterPath="$PROJECT_DIR$/www/js/mesjeux.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/news.js" afterPath="$PROJECT_DIR$/www/js/news.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/listechats.html" afterPath="$PROJECT_DIR$/www/listechats.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/mesjeux.html" afterPath="$PROJECT_DIR$/www/mesjeux.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/news.html" afterPath="$PROJECT_DIR$/www/news.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,23 +34,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="evenementsDetails.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/evenementsDetails.html">
+      <file leaf-file-name="evenements.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/evenements.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="108" lean-forward="false" selection-start-line="13" selection-start-column="108" selection-end-line="13" selection-end-column="108" />
+            <state relative-caret-position="85">
+              <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="40" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1488884685175" expanded="true" signature="5630:5636" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profil.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/profil.html">
+      <file leaf-file-name="listechats.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/listechats.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="37" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,41 +59,28 @@
       <file leaf-file-name="chats.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/chats.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#7;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chats.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chats.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/chats.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evenements.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/evenements.js">
+      <file leaf-file-name="evenementsInscriptions.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/evenementsInscriptions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="80" column="117" lean-forward="true" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="117" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spec.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/spec.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" column="52" lean-forward="false" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,18 +89,30 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4165">
-              <caret line="245" column="8" lean-forward="false" selection-start-line="245" selection-start-column="4" selection-end-line="245" selection-end-column="9" />
+            <state relative-caret-position="4590">
+              <caret line="270" column="0" lean-forward="false" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jeuxDetails.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/jeuxDetails.html">
+      <file leaf-file-name="mesjeux.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/mesjeux.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            <state relative-caret-position="34">
+              <caret line="14" column="124" lean-forward="false" selection-start-line="14" selection-start-column="124" selection-end-line="14" selection-end-column="124" />
+              <folding>
+                <marker date="1488884734522" expanded="true" signature="669:684" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fonctions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/fonctions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -151,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xeno.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="xeno.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/css/xeno.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="112" column="35" lean-forward="false" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
+            <state relative-caret-position="1258">
+              <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -188,7 +165,6 @@
         <option value="$PROJECT_DIR$/www/chats.js" />
         <option value="$PROJECT_DIR$/www/js/listeInscriptions.js" />
         <option value="$PROJECT_DIR$/www/listeInscriptions.html" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/jeuxDetails.html" />
         <option value="$PROJECT_DIR$/www/news.html" />
         <option value="$PROJECT_DIR$/www/evenementsInscriptions.html" />
@@ -200,9 +176,10 @@
         <option value="$PROJECT_DIR$/www/mesjeux.html" />
         <option value="$PROJECT_DIR$/www/listechats.html" />
         <option value="$PROJECT_DIR$/www/chat.html" />
-        <option value="$PROJECT_DIR$/www/js/chats.js" />
         <option value="$PROJECT_DIR$/www/chats.html" />
+        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/css/xeno.css" />
+        <option value="$PROJECT_DIR$/www/js/chats.js" />
       </list>
     </option>
   </component>
@@ -213,9 +190,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="-7" />
     <option name="width" value="1604" />
-    <option name="height" value="876" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -489,33 +466,38 @@
       <workItem from="1488819385138" duration="9063000" />
       <workItem from="1488841566664" duration="2585000" />
       <workItem from="1488884595581" duration="4270000" />
-      <workItem from="1488987018434" duration="30000" />
+      <workItem from="1488987018434" duration="622000" />
+      <workItem from="1489057630992" duration="845000" />
+      <workItem from="1489062520072" duration="6603000" />
+      <workItem from="1489144087058" duration="5425000" />
+      <workItem from="1489156194205" duration="1443000" />
+      <workItem from="1489169733741" duration="5042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139100000" />
+    <option name="totallyTimeSpent" value="159050000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1604" height="876" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1604" height="867" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23488665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2336272" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23778072" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +508,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/www/js/chats.js</url>
+          <line>63</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -735,13 +724,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../ROProjet/craie.html" />
-    <entry file="file://$PROJECT_DIR$/www/newsDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/www/newsDetails.html" />
     <entry file="file://$PROJECT_DIR$/www/js/listeInscriptions.js" />
     <entry file="file://$PROJECT_DIR$/www/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -750,13 +733,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/profil.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/profil.js" />
     <entry file="file://$PROJECT_DIR$/www/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1955">
@@ -764,53 +741,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/fonctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/news.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="41" column="40" lean-forward="false" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/mesjeux.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/listechats.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/evenementsInscriptions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/news.js" />
+    <entry file="file://$PROJECT_DIR$/www/news.html" />
     <entry file="file://$PROJECT_DIR$/www/mesjeux.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,71 +754,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
           <caret line="65" column="52" lean-forward="false" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/profil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/www/profil.html" />
     <entry file="file://$PROJECT_DIR$/www/evenementsDetails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="108" lean-forward="false" selection-start-line="13" selection-start-column="108" selection-end-line="13" selection-end-column="108" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/jeuxDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding />
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/evenements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="117" lean-forward="true" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4165">
-          <caret line="245" column="8" lean-forward="false" selection-start-line="245" selection-start-column="4" selection-end-line="245" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/chats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/chats.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#7;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/www/jeuxDetails.html" />
     <entry file="file://$PROJECT_DIR$/www/evenements.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -891,10 +774,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/fonctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/evenementsInscriptions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4590">
+          <caret line="270" column="0" lean-forward="false" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/xeno.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="112" column="35" lean-forward="false" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
+        <state relative-caret-position="1258">
+          <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/listechats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/evenements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="40" />
+          <folding>
+            <marker date="1488884685175" expanded="true" signature="5630:5636" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/chats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/mesjeux.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="14" column="124" lean-forward="false" selection-start-line="14" selection-start-column="124" selection-end-line="14" selection-end-column="124" />
+          <folding>
+            <marker date="1488884734522" expanded="true" signature="669:684" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/chats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
           <folding />
         </state>
       </provider>

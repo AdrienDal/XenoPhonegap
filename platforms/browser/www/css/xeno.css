@@ -76,6 +76,10 @@
     font-family: 'typewriter';
 }
 
+.messages-content{
+    font-family : 'arial';
+    text-transform : none;
+}
 
   .demo-card-header-pic .card-header {
     height: 40vw;

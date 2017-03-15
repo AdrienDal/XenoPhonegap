@@ -188,7 +188,7 @@
 <script type="text/javascript">
     app.initialize();
     var mainView;
-    var user;
+    var user = "";
     var apiHost = "http://adrien.dallinge.ch/cave/wp-json";
     var myApp = new Framework7({
         swipePanel: 'left',
@@ -266,6 +266,7 @@
             user.name = data.name;
             user.thumbnail = data.thumbnail;
             user.connexion = data.connexion;
+            user.id = data.id_user;
             $("#nameUser").html(user.name);
             $("#imgUser").prop('src', user.thumbnail);
             $("#viaUser").html("via " + user.connexion);
@@ -280,7 +281,6 @@
 <script src="js/news.js" type="text/javascript"></script>
 <script src="js/profil.js" type="text/javascript"></script>
 <script src="js/chats.js" type="text/javascript"></script>
-<script src="js/listeInscriptions.js" type="text/javascript"></script>
 </body>
 
 </html>
