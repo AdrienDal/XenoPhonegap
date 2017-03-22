@@ -8,7 +8,7 @@ myApp.onPageInit('chats', function (page) {
 
 function initChatsPage(id) {
     idpost = id;
-    idDernierMsg = 0;
+    idDernierMsg =  0;
     myMessages = myApp.messages('.messages', {
         autoLayout: true
     });
