@@ -118,3 +118,39 @@
  }
 
  .size-18 { font-size: 18px; padding-left : 3px; }
+ 
+ .button-contact{
+ 	margin-top:3%;
+	margin-right:4% ;
+	margin-left:4% ;
+ }
+ .title-contact{
+ 	font-size:20px;
+ 	margin-top: 2%;
+ 	margin-left:4% ;
+ 	
+ }
+ .ligne-contact{
+ 	margin-right:4% ;
+ 	
+ }
+.alignement-contact{
+	float:right;
+	margin-right:20% ;
+}
+.padding-top{
+	padding-top:2%;
+}
+.padding-bot{
+	padding-bottom:3%;
+}
+ .align-nombre{
+     text-align: right;
+     margin-right: 5%;
+ }
+
+ .chColor{
+     color: red;
+     text-align: right;
+     margin-right: 5%;
+ }

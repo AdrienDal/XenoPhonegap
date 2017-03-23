@@ -144,3 +144,13 @@
 .padding-bot{
 	padding-bottom:3%;
 }
+ .align-nombre{
+     text-align: right;
+     margin-right: 5%;
+ }
+
+ .chColor{
+     color: red;
+     text-align: right;
+     margin-right: 5%;
+ }
