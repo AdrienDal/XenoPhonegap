@@ -70,10 +70,10 @@
                     <div class="item-title"> Profil </div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true">
-                <div class="item-media"><i class="f7-icons size-18">list</i></div>
+            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('contacts.html');">
+                <div class="item-media"><i class="f7-icons size-18">phone</i></div>
                 <div class="item-inner">
-                    <div class="item-title"> Classement </div>
+                    <div class="item-title"> Contact </div>
                 </div>
             </li>
         </ul>
@@ -166,7 +166,7 @@
                             <li>
                                 <span class="buttons-row">
                                     <a onClick="mainView.router.loadPage('profil.html');" href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-orange"><i class="f7-icons size-15">person</i> Profil </a>
-                                    <a href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-brown"><i class="f7-icons size-15">list</i> Classement</a>
+                                    <a onClick="mainView.router.loadPage('contacts.html');" href="#" style="height : 80px;padding-top: 20px;" data-force="true" class="button button-raised button-fill color-red"><i class="f7-icons size-15">phone</i> Contacts</a>
                                 </span>
                             </li>
                         </ul>

@@ -13,7 +13,7 @@ function initChatsPage(id) {
         autoLayout: true
     });
     getLastMessages(idpost,true);
-    setInterval(function(){getLastMessages(idpost,true)}, 5000);
+    interval = setInterval(function(){getLastMessages(idpost,true)}, 5000);
 }
 
 function getLastMessages(async) {
@@ -43,6 +43,7 @@ function getLastMessages(async) {
 }
 
 function envoieMsg() {
+    clearInterval(interval);
     var messageText = $("#tAMessage").val().trim();
     $("#tAMessage").val('');
     $.ajax({
@@ -59,6 +60,7 @@ function envoieMsg() {
             name: user.name
         }, 'append', true);
         idDernierMsg = response;
+        interval = setInterval(function(){getLastMessages(idpost,true)}, 5000);
     });
 }
 
