@@ -81,23 +81,96 @@
 </div>
 <div data-page="login-screen" class="page no-navbar no-toolbar no-swipeback login-screen xenofont modal-in layout-dark">
     <div class="page-content login-screen-content layout-dark">
-        <div class="login-screen-title"><img id="xenologo" src="img/xenomorphe_logo_white_LD.png"/></div>
+        <div class="login-screen-title">
+            <img id="xenologo" src="img/xenomorphe_logo_white_LD.png"/></div>
         <form>
             <p class="buttons-row ">
                 <a href="#" onclick="login('google')"
-                   class="button button-big button-fill theme-red"><i class="f7-icons size-22">social_googleplus</i>
+                   class="button button-big button-fill color-red"><i class="f7-icons size-22">social_googleplus</i>
                     Google</a>
             </p>
             <p class="buttons-row ">
                 <a href="#" onclick="login('facebook')"
-                   class="button button-big button-fill theme-blue "><i class="f7-icons size-22">social_facebook</i>
+                   class="button button-big button-fill color-blue "><i class="f7-icons size-22">social_facebook</i>
                     Facebook</a>
             </p>
-
+            <div class="list-block-label" style="padding : 0px; margin-top : -7px; margin-bottom : -20px;">
+                <p>ou</p>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input type="text" name="username" placeholder="Login" style="text-align: center;" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input type="password" name="password" placeholder="Mot de passe" style="text-align: center;" />
+                            </div>
+                        </div>
+                    </li>
+                        <p class="buttons-row">
+                            <a href="#" data-popup=".popup-inscription" class="button button-big color-white open-popup" style="border : none; margin-top: -10px;">Inscription</a>
+                            <a href="#" class="button button-big color-white" style="border : none; margin-top: -10px;">Connexion</a>
+                        </p>
+                </ul>
+            </div>
             <div class="list-block-label">
                 <p>Veuillez vous connecter pour accéder aux contenus de l'application.</p>
             </div>
         </form>
+        <div class="popup popup-inscription tablet-fullscreen layout-white">
+            <div class="content-block">
+                <div class="list-block-label">
+                    <h2>Inscription</h2>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li class="item-content theme-black">
+                            <div class="item-media"><i class="icon f7-icons">person</i></div>
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="text" name="username" placeholder="Login" style="text-align: center;" />
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content theme-black">
+                            <div class="item-media"><i class="icon f7-icons">lock</i></div>
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="password" name="password" placeholder="Mot de passe" style="text-align: center;" />
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content theme-black">
+                            <div class="item-media"><i class="icon f7-icons">lock</i></div>
+                            <div class="item-inner">
+                                <div class="item-input">
+                                    <input type="password" name="password" placeholder="Répéter le mot de passe" style="text-align: center;" />
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content theme-black">
+                                <div class="item-media"><i class="icon f7-icons">email</i></div>
+                                <div class="item-inner">
+                                    <div class="item-input ">
+                                        <input type="email" placeholder="E-mail (Optionel)"  style="text-align: center;">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <p style="text-align: center;" ><a href="#" class="close-popup center">Fermer la fenêtre d'inscription</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Views -->
@@ -249,6 +322,10 @@
 
 
     $$(document).on('page:init', function (e) {
+        initIndexPage ();
+    });
+
+    myApp.onPageBack('index', function(page) {
         initIndexPage ();
     });
 

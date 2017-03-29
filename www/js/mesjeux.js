@@ -77,7 +77,7 @@ function addToFavorite(li) {
 function delFromFavorite(li) {
     $.ajax({
         url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/remfav',
-        type: 'POST',
+        type: 'DELETE',
         data : {jeuId : li.attr('tag')},
         beforeSend: setHeader
     });

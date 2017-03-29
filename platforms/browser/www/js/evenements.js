@@ -12,10 +12,9 @@ myApp.onPageInit('evenementsInscriptions', function (page) {
 
 function initlisteInscriptionPage (id) {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/listeinscritevent',
-        type: 'POST',
+        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/listeinscritevent/'+id,
+        type: 'GET',
         dataType: 'json',
-        data:{"event":id},
         beforeSend: setHeader
     }).done(function(response) {
         $("#loader").remove();
@@ -154,7 +153,7 @@ function inscription(){
     }else{
         $.ajax({
             url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/desinscription',
-            type: 'POST',
+            type: 'DELETE',
             dataType: 'json',
             data: {"event": idEvent},
             beforeSend: setHeader

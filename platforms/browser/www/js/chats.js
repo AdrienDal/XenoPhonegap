@@ -19,10 +19,9 @@ function initChatsPage(id) {
 function getLastMessages(async) {
     var chatMessages = [];
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/getchatmessages',
-        type: 'POST',
+        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/getchatmessages/'+idpost+'?premier='+idDernierMsg+'&nombre=1000',
+        type: 'GET',
         dataType: 'json',
-        data: {"post": idpost, "premier": idDernierMsg, "nombre": 1000},
         async : async,
         beforeSend: setHeader
     }).done(function (response) {

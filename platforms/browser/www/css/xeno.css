@@ -43,7 +43,10 @@
   }
 
  #xenologo {
-    width : 100%;
+    width : 80%;
+     margin-top : -20px;
+     margin-bottom : -30px;
+     padding : 0px;
 }
 
 .menubutton {
@@ -154,3 +157,4 @@
      text-align: right;
      margin-right: 5%;
  }
+
