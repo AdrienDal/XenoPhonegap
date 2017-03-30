@@ -102,74 +102,70 @@
                     <li class="item-content">
                         <div class="item-inner">
                             <div class="item-input">
-                                <input type="text" name="username" placeholder="Login" style="text-align: center;" />
+                                <input type="text" name="username" id="login_native" placeholder="Login" style="text-align: center;" />
                             </div>
                         </div>
                     </li>
                     <li class="item-content">
                         <div class="item-inner">
                             <div class="item-input">
-                                <input type="password" name="password" placeholder="Mot de passe" style="text-align: center;" />
+                                <input type="password" name="password" id="password_native" placeholder="Mot de passe" style="text-align: center;" />
                             </div>
                         </div>
                     </li>
                         <p class="buttons-row">
                             <a href="#" data-popup=".popup-inscription" class="button button-big color-white open-popup" style="border : none; margin-top: -10px;">Inscription</a>
-                            <a href="#" class="button button-big color-white" style="border : none; margin-top: -10px;">Connexion</a>
+                            <a href="#" onclick="connexionNative();" class="button button-big color-white" style="border : none; margin-top: -10px;">Connexion</a>
                         </p>
                 </ul>
             </div>
-            <div class="list-block-label">
+          <!--  <div class="list-block-label">
                 <p>Veuillez vous connecter pour accéder aux contenus de l'application.</p>
-            </div>
+            </div>-->
         </form>
-        <div class="popup popup-inscription tablet-fullscreen layout-white">
-            <div class="content-block">
-                <div class="list-block-label">
-                    <h2>Inscription</h2>
-                </div>
-                <div class="list-block">
-                    <ul>
-                        <li class="item-content theme-black">
-                            <div class="item-media"><i class="icon f7-icons">person</i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input type="text" name="username" placeholder="Login" style="text-align: center;" />
-                                </div>
+    </div>
+</div>
+<!-- popup inscription -->
+<div class="popup popup-inscription tablet-fullscreen xenofont">
+    <div class="content-block">
+        <div class="list-block no-border">
+            <h2 style="text-align: center;" >Inscription</h2>
+            <ul>
+                <li class="item-content">
+                    <div class="item-media"><i class="icon f7-icons">person</i></div>
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <input type="text" id="login_inscription" name="username" placeholder="Login" style="text-align: center; " />
+                        </div>
+                    </div>
+                </li>
+                <li class="item-content ">
+                    <div class="item-media"><i class="icon f7-icons">lock</i></div>
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <input type="password" id="password_inscription" name="password" placeholder="Mot de passe" style="text-align: center;" />
+                        </div>
+                    </div>
+                </li>
+                <li class="item-content ">
+                    <div class="item-media"><i class="icon f7-icons">lock</i></div>
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <input type="password" id="password_repeat_inscription" name="password" placeholder="Répéter le mot de passe" style="text-align: center;" />
+                        </div>
+                    </div>
+                </li>
+                <li class="item-content">
+                        <div class="item-media"><i class="icon f7-icons">email</i></div>
+                        <div class="item-inner">
+                            <div class="item-input ">
+                                <input type="email" id="email_inscription" placeholder="E-mail (Optionel)"  style="text-align: center;">
                             </div>
-                        </li>
-                        <li class="item-content theme-black">
-                            <div class="item-media"><i class="icon f7-icons">lock</i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input type="password" name="password" placeholder="Mot de passe" style="text-align: center;" />
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-content theme-black">
-                            <div class="item-media"><i class="icon f7-icons">lock</i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input type="password" name="password" placeholder="Répéter le mot de passe" style="text-align: center;" />
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content theme-black">
-                                <div class="item-media"><i class="icon f7-icons">email</i></div>
-                                <div class="item-inner">
-                                    <div class="item-input ">
-                                        <input type="email" placeholder="E-mail (Optionel)"  style="text-align: center;">
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <p style="text-align: center;" ><a href="#" class="close-popup center">Fermer la fenêtre d'inscription</a></p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                        </div>
+                </li>
+            </ul>
+            <p><a href="#" class="button" onclick="inscriptionNative();">S'incrire</a></p>
+            <p style="text-align: center;" ><a href="#" class="close-popup center">Fermer la fenêtre d'inscription</a></p>
         </div>
     </div>
 </div>
@@ -280,6 +276,11 @@
         redirect_uri: 'https://adodson.com/hello.js/redirect.html'
     });
 
+    if (localStorage.getItem('login_native') != 'undefined' && localStorage.getItem('password_native') != 'undefined'){
+        $("#login_native").val(localStorage.getItem('login_native'));
+        $("#password_native").val(localStorage.getItem('password_native'));
+    }
+
     if (localStorage.getItem('user') != 'undefined' ) {
         user = JSON.parse(localStorage.getItem('user'));
         initIndexPage ()
@@ -349,6 +350,51 @@
             $("#viaUser").html("via " + user.connexion);
         });
     }
+
+    /*********************************************** INSCRIPTION ET CONNEXION NATIVE ****************************************/
+    function inscriptionNative() {
+        var login_inscription = $("#login_inscription").val();
+        var password_inscription = $("#password_inscription").val();
+        var password_repeat_inscription = $("#password_repeat_inscription").val();
+        var email_inscription = $("#email_inscription").val();
+
+        if(password_inscription == password_repeat_inscription) {
+            $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users/native",
+                {
+                    login: login_inscription,
+                    password : login_inscription,
+                    email :  email_inscription
+                },
+                function (reponse) {
+                    myApp.alert("",'Inscription terminée avec succès');
+                    $("#login_native").val(login_inscription);
+                    $("#password_native").val(password_inscription);
+                    myApp.closeModal('.popup-inscription');
+                }).fail(function() {
+                    alert( "error" );
+                })
+        }else {
+            alert('password incorrect');
+        }
+    }
+
+    function connexionNative() {
+        var login_native = $("#login_native").val();
+        var password_native = $("#password_native").val();
+        if(login_native.length > 0 && password_native.length > 0) {
+            $.post("http://adrien.dallinge.ch/cave/wp-json/jwt-auth/v1/token", {username : login_native, password : password_native}, function(reponse){
+                user.token = reponse;
+                localStorage.setItem('user',JSON.stringify(user));
+                localStorage.setItem('login_native',login_native);
+                localStorage.setItem('password_native',password_native);
+                initIndexPage();
+                myApp.closeModal('.login-screen');
+            }).fail(function() {
+                alert( "error" );
+            });
+        }
+    }
+
 
 
 </script>

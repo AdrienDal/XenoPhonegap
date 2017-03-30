@@ -152,10 +152,9 @@ function inscription(){
         btnInscription.html("Inscrit");
     }else{
         $.ajax({
-            url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/desinscription',
+            url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/desinscription?' +$.param({"event": idEvent}),
             type: 'DELETE',
             dataType: 'json',
-            data: {"event": idEvent},
             beforeSend: setHeader
         }) .done(function(){
             mainView.router.refreshPreviousPage();
@@ -163,3 +162,23 @@ function inscription(){
         btnInscription.html("S'inscrire");
     }
 }
+
+$.ajax({
+    url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/listeinscritevent',
+    type: 'POST',
+    dataType: 'json',
+    data:{"event":id},
+    beforeSend: setHeader
+}).done(function(response) {
+    var nb=  response.length;
+    if (nb==0){
+        $('#resNbr').html("Il n'y a pas d'inscrits");
+        $('#resNbr').attr('class','chColor')}
+    else if (nb==1) {
+        $('#resNbr').html("1 personne est inscrite");
+        $('#resNbr').attr('class','chColor')}
+    else {
+        $('#resNbr').html(nb+" personnes sont inscrites");
+        $('#resNbr').attr('class','chColor')}
+});
+
