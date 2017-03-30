@@ -158,3 +158,29 @@
      margin-right: 5%;
  }
 
+.linkMod{
+text-align: right;
+float: right;
+margin-right: 5px;
+margin-left: 70px;
+}
+
+.imgAvatar,.imgAvatarD{
+	-webkit-border-radius:40px;
+    -moz-border-radius:40px;
+    border-radius:40px;
+   }
+    
+ .divChange{
+margin-top: 20px;
+ }
+ 
+ .itemSize{
+ margin-bottom: 18px;
+ margin-left: 15px;
+ margin-right: 15px;}
+ 
+ 
+ .btnSave{
+margin-bottom: 5px; 
+ }
