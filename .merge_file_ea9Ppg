@@ -1,0 +1,191 @@
+ .facebook-card .card-header {
+    display: block;
+    padding: 10px;
+  }
+  .facebook-card .facebook-avatar {
+    float: left;
+  }
+  .facebook-card .facebook-name {
+    margin-left: 44px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .facebook-card .facebook-date {
+    margin-left: 44px;
+    font-size: 13px;
+    color: #8e8e93;
+  }
+  .facebook-card .card-footer {
+    background: #fafafa;
+  }
+  .facebook-card .card-footer a {
+    color: #81848b;
+    font-weight: 500;
+  }
+  .facebook-card .card-content img {
+    display: block;
+  }
+  .facebook-card .card-content-inner {
+    padding: 15px 10px;
+  }
+
+
+  .fb-custom {
+      margin-left: 5px;
+      font-size: 14px;
+      font-weight: 500;
+  }
+
+  .fb-date-custom {
+      margin-left: 5px;
+      font-size: 13px;
+      color: #8e8e93;
+  }
+
+ #xenologo {
+    width : 85%;
+     margin-top : -15px;
+     margin-bottom : -35px;
+     padding : 0px;
+}
+
+.menubutton {
+    height: 300px;
+}
+
+.col-25 {
+    padding:5px;
+    text-align:center;
+}
+
+#pageIndex .button {
+    margin : 1.2px;
+    font-size : 20px;
+}
+
+@font-face {
+    font-family: 'typewriter';
+    src: url('fonts/typewriter.eot'), url('fonts/typewriter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#newfont {
+    font-family: 'typewriter';
+}
+
+
+.xenofont {
+    font-family: 'typewriter';
+}
+
+.messages-content{
+    font-family : 'arial';
+    text-transform : none;
+}
+
+  .demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .custom-listView{
+      margin-top : 0px;
+  }
+
+  #listViewJeux img {
+      max-height : 50px;
+      width : auto;
+  }
+
+  #textNews img{
+      max-width : 90%;
+      height:auto;
+  }
+
+ #textEvents img{
+     max-width : 90%;
+     height:auto;
+ }
+
+ #imgJeu {
+     max-height: 80px;
+     padding-right : 8px;
+     width : auto;
+ }
+
+ .inscrit {
+     background-color: palegreen;
+    /* border : green dashed 1px */
+ }
+
+ .size-18 { font-size: 18px; padding-left : 3px; }
+ 
+ .button-contact{
+ 	margin-top:3%;
+	margin-right:4% ;
+	margin-left:4% ;
+ }
+ .title-contact{
+ 	font-size:20px;
+ 	margin-top: 2%;
+ 	margin-left:4% ;
+ 	
+ }
+ .ligne-contact{
+ 	margin-right:4% ;
+ 	
+ }
+.alignement-contact{
+	float:right;
+	margin-right:16% ;
+}
+.padding-top{
+	padding-top:2%;
+}
+.padding-bot{
+	padding-bottom:3%;
+}
+ .align-nombre{
+     text-align: right;
+     margin-right: 5%;
+ }
+
+ .chColor{
+     color: red;
+     text-align: right;
+     margin-right: 5%;
+ }
+
+.linkMod{
+text-align: right;
+float: right;
+margin-right: 5px;
+margin-left: 70px;
+}
+
+.imgAvatar,.imgAvatarD{
+	-webkit-border-radius:40px;
+    -moz-border-radius:40px;
+    border-radius:40px;
+   }
+    
+ .divChange{
+margin-top: 20px;
+ }
+ 
+ .itemSize{
+ margin-bottom: 18px;
+ margin-left: 15px;
+ margin-right: 15px;}
+ 
+ 
+ .btnSave{
+margin-bottom: 5px; 
+ .popup-inscription .placeholder{
+     !important color : black;
+      !important font-color : black;
+ }
+
+ }
