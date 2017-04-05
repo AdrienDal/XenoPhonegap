@@ -176,16 +176,14 @@ margin-top: 20px;
  }
  
  .itemSize{
- margin-bottom: 18px;
- margin-left: 15px;
- margin-right: 15px;}
- 
+ margin-bottom: 3%;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top:3%;
+ text-align: center;}
  
  .btnSave{
-margin-bottom: 5px; 
- .popup-inscription .placeholder{
-     !important color : black;
-      !important font-color : black;
+
  }
 
  }
