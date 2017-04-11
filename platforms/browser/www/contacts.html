@@ -5,17 +5,12 @@
                 <div class="card-content-inner">
                     <div class="list-block">
                         <ul>
-                            <li>
-                                <div class="title-contact">
-                                    informations
-                                </div>
-                            </li>
                             <li >
                                 <div class="item-content">
                                     <div class="item-media"><i class="icon f7-icons">phone</i></div>
                                     <div class="item-inner ligne-contact">
                                         <div class="item-input ">
-                                            <a href="tel:+41223297052">022 329 70 52</a>
+                                            <a onClick="appel();">022 329 70 52</a>
                                         </div>
                                     </div>
                                 </div>
@@ -49,7 +44,7 @@
                                     <div class="item-media"><i class="icon f7-icons">world</i></div>
                                     <div class="item-inner ligne-contact">
                                         <div class="item-input">
-                                            <a href="#" onclick="window.open('https://xenomorphe.ch/presentation-2/presentation/', '_blank', 'location=yes');">XENOMORPHE.CH<a>
+                                            <a href="#" onclick="window.open('https://xenomorphe.ch/presentation-2/presentation/', '_blank', 'location=yes');">XENOMORPHE.CH</a>
                                         </div>
                                     </div>
                                 </div>
@@ -57,9 +52,10 @@
                         </ul>
                     </div>
                     </br>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.473963573556!2d6.135649315345988!3d46.201025691996165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64d5b2376647%3A0x5a96c328638d3dba!2sXenomorphe+S%C3%A0rl!5e0!3m2!1sfr!2sch!4v1490176937737" width="100%" height="40%" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    <!-- In data-popup attribute we specify CSS selector of popup we need to open -->
-                    <a onClick="mainView.router.loadPage('contactsMail.html');" href="#"  class="button button-big button-contact">Contactez-nous</a>
+                    <div id="map-canvas" style="width : 100%; min-height : 250px;"></div>
+                  <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.473963573556!2d6.135649315345988!3d46.201025691996165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64d5b2376647%3A0x5a96c328638d3dba!2sXenomorphe+S%C3%A0rl!5e0!3m2!1sfr!2sch!4v1490176937737" width="100%" height="40%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                   --> <!-- In data-popup attribute we specify CSS selector of popup we need to open -->
+                    <a onClick="sendEmail" href="#"  class="button button-big button-contact">Nous contacter</a>
                 </div>
             </div>
         </div>  

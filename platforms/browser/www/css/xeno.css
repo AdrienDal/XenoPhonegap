@@ -58,6 +58,9 @@
     text-align:center;
 }
 
+#pageIndex {
+    margin-top : 20px;
+}
 #pageIndex .button {
     margin : 1.2px;
     font-size : 20px;
@@ -123,9 +126,9 @@
  .size-18 { font-size: 18px; padding-left : 3px; }
  
  .button-contact{
- 	margin-top:3%;
-	margin-right:4% ;
-	margin-left:4% ;
+ 	margin-top:4%;
+	margin-right:0% ;
+	margin-left:0% ;
  }
  .title-contact{
  	font-size:20px;
@@ -183,7 +186,5 @@ margin-top: 20px;
  text-align: center;}
  
  .btnSave{
-
- }
 
  }

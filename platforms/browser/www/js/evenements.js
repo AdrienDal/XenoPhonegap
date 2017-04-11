@@ -50,30 +50,33 @@ function initEvenementsDetailsPage(id,inscrit) {
             $("#linkViewList").attr('tag', id);
         });
 
-        $.ajax({
-            url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/listeinscritevent',
-            type: 'POST',
-            dataType: 'json',
-            data:{"event":id},
-            beforeSend: setHeader
-        }).done(function(response) {
-            var nb=  response.length;
-            if (nb==0){
-                $('#resNbr').html("Il n'y a pas d'inscrits");
-                $('#resNbr').attr('class','chColor')}
-            else if (nb==1) {
-                $('#resNbr').html("1 personne est inscrite");
-                $('#resNbr').attr('class','chColor')}
-            else {
-                $('#resNbr').html(nb+" personnes sont inscrites");
-                $('#resNbr').attr('class','chColor')}
-        });
+        setNombreInscrits(id);
 
         if (inscrit == "true") {
             var btnInscription = $("#btnInscription");
             btnInscription.addClass("button-fill");
             btnInscription.html("Inscrit");
         }
+}
+
+function setNombreInscrits(id){
+    $.ajax({
+        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/listeinscritevent/'+id,
+        type: 'GET',
+        dataType: 'json',
+        beforeSend: setHeader
+    }).done(function(response) {
+        var nb=  response.length;
+        if (nb==0){
+            $('#resNbr').html("Il n'y a pas d'inscrits");
+            $('#resNbr').attr('class','chColor')}
+        else if (nb==1) {
+            $('#resNbr').html("1 personne est inscrite");
+            $('#resNbr').attr('class','chColor')}
+        else {
+            $('#resNbr').html(nb+" personnes sont inscrites");
+            $('#resNbr').attr('class','chColor')}
+    });
 }
 
 function initEvenementsPage () {
@@ -147,6 +150,7 @@ function inscription(){
             data:{"event": idEvent},
             beforeSend: setHeader
         }) .done(function(){
+            setNombreInscrits(idEvent);
             mainView.router.refreshPreviousPage();
         });
         btnInscription.html("Inscrit");
@@ -157,28 +161,10 @@ function inscription(){
             dataType: 'json',
             beforeSend: setHeader
         }) .done(function(){
+            setNombreInscrits(idEvent);
             mainView.router.refreshPreviousPage();
         });
         btnInscription.html("S'inscrire");
     }
 }
-
-$.ajax({
-    url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/listeinscritevent',
-    type: 'POST',
-    dataType: 'json',
-    data:{"event":id},
-    beforeSend: setHeader
-}).done(function(response) {
-    var nb=  response.length;
-    if (nb==0){
-        $('#resNbr').html("Il n'y a pas d'inscrits");
-        $('#resNbr').attr('class','chColor')}
-    else if (nb==1) {
-        $('#resNbr').html("1 personne est inscrite");
-        $('#resNbr').attr('class','chColor')}
-    else {
-        $('#resNbr').html(nb+" personnes sont inscrites");
-        $('#resNbr').attr('class','chColor')}
-});
 
