@@ -19,6 +19,7 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" launch-external="yes" />
+    <allow-intent href="callto:*" launch-external="yes" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" launch-external="yes" />
     <allow-intent href="geo:*" />
