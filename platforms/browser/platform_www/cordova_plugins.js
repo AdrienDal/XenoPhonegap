@@ -602,6 +602,37 @@ module.exports = [
             "navigator.notification",
             "navigator"
         ]
+    },
+    {
+        "file": "plugins/com.teamnemitoff.phonedialer/www/dialer.js",
+        "id": "com.teamnemitoff.phonedialer.phonedialer",
+        "pluginId": "com.teamnemitoff.phonedialer",
+        "merges": [
+            "phonedialer"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-googlemaps/www/googlemaps-cdv-plugin.js",
+        "id": "cordova-plugin-googlemaps.cordova-plugin-googlemaps",
+        "pluginId": "cordova-plugin-googlemaps",
+        "clobbers": [
+            "cordova-plugin-googlemaps"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
+        "id": "cordova-plugin-email-composer.EmailComposer",
+        "pluginId": "cordova-plugin-email-composer",
+        "clobbers": [
+            "cordova.plugins.email",
+            "plugin.email"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-email-composer/src/browser/EmailComposerProxy.js",
+        "id": "cordova-plugin-email-composer.EmailComposerProxy",
+        "pluginId": "cordova-plugin-email-composer",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -627,7 +658,10 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "3.2.2",
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-vibration": "2.1.3",
-    "cordova-plugin-whitelist": "1.2.2"
+    "cordova-plugin-whitelist": "1.2.2",
+    "com.teamnemitoff.phonedialer": "0.3.0",
+    "cordova-plugin-googlemaps": "1.4.0",
+    "cordova-plugin-email-composer": "0.8.3"
 }
 // BOTTOM OF METADATA
 });
