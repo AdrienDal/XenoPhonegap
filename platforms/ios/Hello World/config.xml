@@ -70,10 +70,10 @@
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" launch-external="yes" />
-    <allow-intent href="callto:*" launch-external="yes" />
+    <allow-intent href="tel:*" launch-external="true" />
+    <allow-intent href="callto:*" launch-external="true" />
     <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" launch-external="yes" />
+    <allow-intent href="mailto:*" launch-external="true" />
     <allow-intent href="geo:*" />
     <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
     <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />

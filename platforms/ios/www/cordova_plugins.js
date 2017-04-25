@@ -472,7 +472,8 @@ module.exports.metadata =
     "cordova-plugin-file-transfer": "1.5.1",
     "cordova-plugin-geolocation": "2.1.0",
     "cordova-plugin-globalization": "1.0.5",
-    "cordova-plugin-email-composer": "0.8.3"
+    "cordova-plugin-email-composer": "0.8.3",
+    "cordova-plugin-whitelist": "1.2.2"
 };
 // BOTTOM OF METADATA
 });

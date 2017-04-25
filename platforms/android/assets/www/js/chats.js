@@ -19,7 +19,7 @@ function initChatsPage(id) {
 function getLastMessages(async) {
     var chatMessages = [];
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/getchatmessages/'+idpost+'?premier='+idDernierMsg+'&nombre=1000',
+        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/getlastchatmessages/'+idpost+'?premier='+idDernierMsg+'&nombre=30',
         type: 'GET',
         dataType: 'json',
         async : async,
@@ -65,15 +65,22 @@ function envoieMsg() {
 
 function initListeChatsPage() {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/jeux',
+        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/getchats',
         type: 'GET',
         dataType: 'json',
         beforeSend: setHeader
     }).done(function (response) {
         $.each(response, function () {
             var fav;
-            (!$(this)[0].favoris) ? fav = "" :
-                fav = "fav";
+            var lastmsg;
+            (!$(this)[0].favoris) ? fav = "" : fav = "fav";
+            (!$(this)[0].lastMsg) ?
+                lastmsg = "<div class='item-subtitle'>Aucun message</div>" +
+                "<div class='item-text'>Soyez le premier à écrire dans ce chat !</div>" +
+                "</div>" :
+                lastmsg = "<div class='item-subtitle'>" + $(this)[0].lastMsg[0].message_datetime +"</div>" +
+                "<div class='item-text'>"+  $(this)[0].lastMsg[0].display_name +" : "+  $(this)[0].lastMsg[0].message_texte +"</div>" +
+                "</div>";
             $("#listViewChats").append("" +
                 "<li class='" + fav + "' onClick=\"mainView.router.loadPage('chats.html?id="+$(this)[0].ID+"')\">" +
                 "<a class='item-link item-content'>" +
@@ -83,16 +90,13 @@ function initListeChatsPage() {
                 "<div class='item-inner'>" +
                 "<div class='item-title-row'>" +
                 "<div class='item-title'>" + $(this)[0].post_title + "</div>" +
-                "<div class='item-after'><span class='badge theme-red'>5</span></div>" +
                 "</div>" +
-                "<div class='item-subtitle'>Dernier message - Jeudi 3 février</div>" +
-                "<div class='item-text'>bla bla bla bla bla bla bla</div>" +
-                "</div>" +
+                lastmsg +
                 "</a>" +
                 "</li>"
             );
         })
-        $("#loader").remove();
+        $("#loaderChat").remove();
         $("#listViewChats").fadeIn();
         showOrHideFavChats(true);
     })

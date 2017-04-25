@@ -29,12 +29,32 @@
     <engines>
       <engine name="cordova-android" version=">=4.0.0" />
     </engines>
-
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" launch-external="yes"/>
+    <allow-intent href="callto:*" launch-external="yes"/>
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" launch-external="yes"/>
+    <allow-intent href="geo:*" />
     <platform name="android">
+        <allow-intent href="http://*/*" />
+        <allow-intent href="https://*/*" />
+        <allow-intent href="tel:*" launch-external="yes"/>
+        <allow-intent href="callto:*" launch-external="yes"/>
+        <allow-intent href="sms:*" />
+        <allow-intent href="mailto:*" launch-external="yes"/>
+        <allow-intent href="geo:*" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Whitelist" >
                 <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin"/>
                 <param name="onload" value="true" />
+                <allow-intent href="http://*/*" />
+                <allow-intent href="https://*/*" />
+                <allow-intent href="tel:*" launch-external="yes"/>
+                <allow-intent href="callto:*" launch-external="yes"/>
+                <allow-intent href="sms:*" />
+                <allow-intent href="mailto:*" launch-external="yes"/>
+                <allow-intent href="geo:*" />
             </feature>
         </config-file>
 

@@ -24,6 +24,7 @@ function initMesJeuxPage () {
         dataType: 'json',
         beforeSend: setHeader
     }).done(function(response) {
+            var au_moins_1_fav = false;
             $.each(response,function() {
                 var fav;
                 var star = ""
@@ -31,7 +32,8 @@ function initMesJeuxPage () {
                 (!$(this)[0].favoris)  ? fav = "" :
                     (fav = "fav",
                         star ="<i class='f7-icons size-10'>star_fill</i>",
-                        addOrRemove = "<a href='#' onClick='delFromFavorite($(this).parent().parent())' class='bg-red'>Supprimer des favoris</a>");
+                        addOrRemove = "<a href='#' onClick='delFromFavorite($(this).parent().parent())' class='bg-red'>Supprimer des favoris</a>",
+                        au_moins_1_fav = true);
                 $("#listViewJeux").append("" +
                     "<li class='swipeout "+fav+"' tag='"+$(this)[0].ID+"'>" +
                         "<a onClick=\"mainView.router.loadPage('jeuxDetails.html?id="+$(this)[0].ID+"&favdetail="+$(this)[0].favoris+"');\" class='item-link swipeout-content item-content'>" +
@@ -54,8 +56,13 @@ function initMesJeuxPage () {
             })
         $("#loader").remove();
         $("#listViewJeux").fadeIn();
-        showOrHideFavJeux(true)
-        })
+        if (au_moins_1_fav) {
+            showOrHideFavJeux(true);
+        }else {
+            myApp.swipeoutOpen($("#listViewJeux li:first-child"), 'right',function(){myApp.alert("Ajoutez vos jeux favoris en swippant dessus !", "Aide")
+            });
+        }
+    })
 };
 
 function addToFavorite(li) {
