@@ -182,7 +182,7 @@
                         <i class="icon icon-back"></i>
                     </a>
                 </div>
-                <div class="center sliding">
+                <div id="titre_navbar" class="center sliding">
                     Xenomorphe App
                 </div>
                 <div class="right">
@@ -264,7 +264,8 @@
     var apiHost = "http://adrien.dallinge.ch/cave/wp-json";
     var myApp = new Framework7({
         swipePanel: 'left',
-
+        tapHold : true,
+        tapHoldDelay : 1000
     });
 
     var $$ = Dom7;
@@ -412,6 +413,7 @@
             });
         }
     }
+
 
 
 </script>

@@ -11,9 +11,9 @@ var Messages = function (container, params) {
             '{{#if day}}' +
             '<div class="messages-date">{{day}} {{#if time}}, <span>{{time}}</span>{{/if}}</div>' +
             '{{/if}}' +
-            '<div class="message message-{{type}} {{#if hasImage}}message-pic{{/if}} {{#if avatar}}message-with-avatar{{/if}} {{#if position}}message-appear-from-{{position}}{{/if}}">' +
-                '{{#if name}}<div class="message-name">{{name}}</div>{{/if}}' +
-                '<div class="message-text">{{text}}{{#if date}}<div class="message-date">{{date}}</div>{{/if}}</div>' +
+            '<div tag="{{id}}" class="message message-{{type}} {{#if hasImage}}message-pic{{/if}} {{#if avatar}}message-with-avatar{{/if}} {{#if position}}message-appear-from-{{position}}{{/if}}">' +
+                '{{#if name}}<div class="message-name">{{id}}</div>{{/if}}' +
+                '<div tag="{{id}}" class="message-text">{{text}}{{#if date}}<div tag="{{id}}" class="message-date">{{date}}</div>{{/if}}</div>' +
                 '{{#if avatar}}<div class="message-avatar" style="background-image:url({{avatar}})"></div>{{/if}}' +
                 '{{#if label}}<div class="message-label">{{label}}</div>{{/if}}' +
             '</div>'
