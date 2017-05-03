@@ -170,6 +170,61 @@
         </div>
     </div>
 </div>
+
+<!-- popup modification -->
+<div class="popup popup-profil tablet-fullscreen xenofont">
+    <div class="content-block">
+        <div class="list-block no-border">
+            <h2 style="text-align: center;" >Modification</h2>
+            <ul>
+                <li class="item-content">
+                    <div class="item-media"><i class="icon f7-icons">person</i></div>
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <input type="text" id="login_update" name="username" placeholder="Login" style="text-align: center; " />
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-content">
+                    <div class="item-media"><i class="icon f7-icons">email</i></div>
+                    <div class="item-inner">
+                        <div class="item-input ">
+                            <input type="email" id="email_Update" placeholder="E-mail (Optionel)"  style="text-align: center;">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div id="listeAvatar">
+                <div class="row">
+                    <div class="col-auto"><img id="img0" class="choixAvatar" src="./img/avatar/0.png"/></div>
+                    <div class="col-auto"><img id="img1" class="choixAvatar" src="./img/avatar/1.png"/></div>
+                    <div class="col-auto"><img id="img2" class="choixAvatar" src="./img/avatar/2.png"/></div>
+                    <div class="col-auto"><img id="img3" class="choixAvatar" src="./img/avatar/3.png"/></div>
+                    <div class="col-auto"><img id="img4" class="choixAvatar" src="./img/avatar/4.png"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-auto"><img id="img5" class="choixAvatar" src="./img/avatar/5.png"/></div>
+                    <div class="col-auto"><img id="img6" class="choixAvatar" src="./img/avatar/6.png"/></div>
+                    <div class="col-auto"><img id="img7" class="choixAvatar" src="./img/avatar/7.png"/></div>
+                    <div class="col-auto"><img id="img8" class="choixAvatar" src="./img/avatar/8.png"/></div>
+                    <div class="col-auto"><img id="img9" class="choixAvatar" src="./img/avatar/9.png"/></div>
+                </div>
+                <div class="row">
+                    <div class="col-auto"><img id="img10" class="choixAvatar" src="./img/avatar/10.png"/></div>
+                    <div class="col-auto"><img id="img11" class="choixAvatar" src="./img/avatar/11.png"/></div>
+                    <div class="col-auto"><img id="img12" class="choixAvatar" src="./img/avatar/12.png"/></div>
+                    <div class="col-auto"><img id="img13" class="choixAvatar" src="./img/avatar/13.png"/></div>
+                    <div class="col-auto"><img id="img14" class="choixAvatar" src="./img/avatar/14.png"/></div>
+                </div>
+            </div>
+            <p><a href="#" class="button" onclick="saveUpdateUser();">Sauvegarder</a></p>
+            <p style="text-align: center;" ><a href="#" class="close-popup center">Fermer la fenêtre de modification</a></p>
+        </div>
+    </div>
+</div>
+
+
 <!-- Views -->
 <div class="views xenofont">
     <!-- Your main view, should have "view-main" class -->
@@ -308,7 +363,7 @@
                 return hi.api('me').then(function (json) {
                     user = json;
                     user.connexion = network;
-                    $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", { facebookId: (user.connexion == 'facebook') ? user.id : "", googleId:  ((user.connexion == 'google')  ? user.id  : ""), name :  user.name, thumbnail : user.thumbnail },
+                    $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", { facebookId: (user.connexion == 'facebook') ? user.id : "", googleId:  ((user.connexion == 'google')  ? user.id  : ""), name :  user.name, thumbnail : 0 },
                         function(reponse) {
                             user.token = reponse;
                             localStorage.setItem('user',JSON.stringify(user));
@@ -348,11 +403,9 @@
             user.thumbnail = data.thumbnail;
             user.connexion = data.connexion;
             user.id = data.id_user;
-            if (user.thumbnail == "") {
-                user.thumbnail =  "img/avatar_default.png";
-            }
+
             $("#nameUser").html(user.name);
-            $("#imgUser").prop('src', user.thumbnail);
+            $("#imgUser").prop('src', "./img/avatar/"+user.thumbnail+".png");
             $("#viaUser").html("via " + user.connexion);
 
             if (data.first_connect < 1){
@@ -378,7 +431,8 @@
                 {
                     login: login_inscription,
                     password : password_inscription,
-                    email :  email_inscription
+                    email :  email_inscription,
+                    thumbnail : 0
                 },
                 function (reponse) {
                     if (reponse == false){

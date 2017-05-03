@@ -2,10 +2,17 @@ myApp.onPageInit('profil', function (page) {
     initUserPage ();
 });
 
-
 myApp.onPageInit('profil_Details', function (page) {
     initUserDetails ();
 });
+
+
+function initUserPage () {
+    $("#nameUserProfil").html(user.name);
+    $("#imgUserProfil").prop('src',"./img/avatar/"+user.thumbnail+".png");
+    $("#viaUserProfil").html("via " + user.connexion);
+ }
+
 function changeColorTheme(btn,color) {
     removeClassByPrefix(document.body,'theme');
     $('body').addClass('theme-'+color);
@@ -22,39 +29,16 @@ function removeClassByPrefix(el, prefix) {
     return el;
 }
 
-function initUserDetails() {
-        $.ajax({
-            url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/me',
-            type: 'GET',
-            dataType: 'json',
-            beforeSend: setHeader
-        }).done(function( data ) {
-            user.name = data.name;
-            user.thumbnail = data.thumbnail;
-            user.connexion = data.connexion;
-            user.mail=data.user_mail;
-            user.id = data.id_user;
-	 $("#nomUtilisateur").val(user.name);
-            $(".email").val(user.mail);
-            $(".imgAvatarD").prop('src',user.thumbnail);
-});
+function openUpdateProfil() {
+    myApp.popup('.popup-profil');
+    var avatarImg = $("#img"+user.thumbnail);
+    $("#login_update").html(user.name);
+    $("#email_update").html(user.email);
+    avatarImg.css('border','red solid 2px');
 }
 
-
-function initUserPage () {
-        $.ajax({
-            url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/me',
-            type: 'GET',
-            dataType: 'json',
-            beforeSend: setHeader
-        }).done(function( data ) {
-            user.name = data.name;
-            user.thumbnail = data.thumbnail;
-            user.connexion = data.connexion;
-            user.mail=data.user_mail;
-            user.id = data.id_user;
-            $(".nomUtilisateur").html(user.name);
-            $(".imgAvatar").prop('src', user.thumbnail);
-            $(".email").html(user.mail);
-        });
-    }
+$(".choixAvatar").on('click',function() {
+    $(".choixAvatar").css('border','none');
+    var avatarImg = $(this);
+    avatarImg.css('border','red solid 2px');
+});
