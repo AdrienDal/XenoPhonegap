@@ -182,7 +182,7 @@
                         <i class="icon icon-back"></i>
                     </a>
                 </div>
-                <div class="center sliding">
+                <div id="titre_navbar" class="center sliding">
                     Xenomorphe App
                 </div>
                 <div class="right">
@@ -223,8 +223,8 @@
                         <ul>
                             <li>
                                 <span class="buttons-row"> 
-                                    <a  onClick="mainView.router.loadPage('listechats.html');" href="#" style="height : 80px;padding-top: 20px;color :rgb(116,5,9); border-color:rgb(116,5,9);" data-force="true" class="button button-raised  "><i class="f7-icons size-15">chats</i> Chat</a>
-                                    <a onClick="mainView.router.loadPage('evenements.html');" href="#" style="height : 80px;padding-top: 20px;border-color:rgb(116,5,9);" data-force="true" class="button button-raised  "><i class="f7-icons size-15">calendar</i> évènements</a>
+                                    <a  onClick="mainView.router.loadPage('listechats.html');" href="#" style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);" data-force="true" class="button button-raised button-fill "><i class="f7-icons size-15">chats</i> Chat</a>
+                                    <a onClick="mainView.router.loadPage('evenements.html');" href="#" style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);" data-force="true" class="button button-raised button-fill  "><i class="f7-icons size-15">calendar</i> évènements</a>
                                 </span>
                             </li>
                             <li>
@@ -264,7 +264,8 @@
     var apiHost = "http://adrien.dallinge.ch/cave/wp-json";
     var myApp = new Framework7({
         swipePanel: 'left',
-
+        tapHold : true,
+        tapHoldDelay : 1000
     });
 
     var $$ = Dom7;
@@ -324,10 +325,9 @@
         initIndexPage ();
     });
 
-
-    $$(document).on('page:init', function (e) {
+    /*$$(document).on('page:init', function (e) {
         initIndexPage ();
-    });
+    });*/
 
     myApp.onPageBack('index', function(page) {
         initIndexPage ();
@@ -354,6 +354,15 @@
             $("#nameUser").html(user.name);
             $("#imgUser").prop('src', user.thumbnail);
             $("#viaUser").html("via " + user.connexion);
+
+            if (data.first_connect < 1){
+                $.ajax({
+                    url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/firstconnect',
+                    type: 'PUT',
+                    beforeSend: setHeader
+                });
+                mainView.router.loadPage('mesjeux.html');
+            }
         });
     }
 
@@ -372,10 +381,14 @@
                     email :  email_inscription
                 },
                 function (reponse) {
-                    myApp.alert("",'Inscription terminée avec succès');
-                    $("#login_native").val(login_inscription);
-                    $("#password_native").val(password_inscription);
-                    myApp.closeModal('.popup-inscription');
+                    if (reponse == false){
+                        myApp.alert("Nom d'utilisateur ou email existant","Erreur");
+                    }else {
+                        myApp.alert("", 'Inscription terminée avec succès');
+                        $("#login_native").val(login_inscription);
+                        $("#password_native").val(password_inscription);
+                        myApp.closeModal('.popup-inscription');
+                    }
                 }).fail(function() {
                     alert( "error" );
                 })

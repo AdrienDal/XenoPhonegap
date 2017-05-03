@@ -14,7 +14,15 @@ function initContactsPage() {
 }
 
 function sendEmail() {
-    window.open("mailto:dallingea@gmail.com", "_blank");
+    if (device.platform == "iOS") {
+        window.open("mailto:dallingea@gmail.com", "_blank");
+    }else if(device.platform == "Android") {
+        alert('a');
+        cordova.plugins.email.isAvailable( function(isAvailable) {
+            alert ('ok');
+        })
+            cordova.plugins.email.open();
+    }
 }
 
 function appel(){

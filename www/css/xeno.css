@@ -172,7 +172,7 @@ margin-left: 70px;
 	-webkit-border-radius:40px;
     -moz-border-radius:40px;
     border-radius:40px;
-   }
+}
     
  .divChange{
 margin-top: 20px;
@@ -184,7 +184,22 @@ margin-top: 20px;
  margin-right: auto;
  margin-top:3%;
  text-align: center;}
- 
- .btnSave{
 
- }
+body {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#listeAvatar {
+    margin-top : 15px;
+}
+
+#listeAvatar img{
+    width : 50px;
+    height : 50px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    margin : auto;
+}

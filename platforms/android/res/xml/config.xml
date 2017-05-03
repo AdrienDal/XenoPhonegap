@@ -91,10 +91,10 @@
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" launch-external="yes" />
-    <allow-intent href="callto:*" launch-external="yes" />
+    <allow-intent href="tel:*" launch-external="true" />
+    <allow-intent href="callto:*" launch-external="true" />
     <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" launch-external="yes" />
+    <allow-intent href="mailto:*" launch-external="true" />
     <allow-intent href="geo:*" />
     <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />

@@ -105,10 +105,10 @@
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" launch-external="yes"/>
-    <allow-intent href="callto:*" launch-external="yes"/>
+    <allow-intent href="tel:*" launch-external="true"/>
+    <allow-intent href="callto:*" launch-external="true"/>
     <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" launch-external="yes"/>
+    <allow-intent href="mailto:*" launch-external="true"/>
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />

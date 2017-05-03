@@ -184,7 +184,9 @@ margin-top: 20px;
  margin-right: auto;
  margin-top:3%;
  text-align: center;}
- 
- .btnSave{
 
- }
+body {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
