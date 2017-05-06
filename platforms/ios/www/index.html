@@ -115,7 +115,7 @@
                         </div>
                     </li>
                         <p class="buttons-row">
-                            <a href="#" data-popup=".popup-inscription" class="button button-big color-white open-popup" style="border : none; margin-top: -10px;">Inscription</a>
+                            <a href="#" data-popup=".popup-inscription"  onclick="testValide();" class="button button-big color-white open-popup" style="border : none; margin-top: -10px;">Inscription</a>
                             <a href="#" onclick="connexionNative();" class="button button-big color-white" style="border : none; margin-top: -10px;">Connexion</a>
                         </p>
                 </ul>
@@ -127,8 +127,8 @@
     </div>
 </div>
 <!-- popup inscription -->
-<div class="popup popup-inscription tablet-fullscreen xenofont">
-    <div class="content-block">
+<div  class="popup popup-inscription tablet-fullscreen xenofont" >
+    <div  class="content-block">
         <div class="list-block no-border">
             <h2 style="text-align: center;" >Inscription</h2>
             <ul>
@@ -138,6 +138,7 @@
                         <div class="item-input">
                             <input type="text" id="login_inscription" name="username" placeholder="Login" style="text-align: center; " />
                         </div>
+                        
                     </div>
                 </li>
                 <li class="item-content ">
@@ -167,6 +168,7 @@
             </ul>
             <p><a href="#" class="button" onclick="inscriptionNative();">S'incrire</a></p>
             <p style="text-align: center;" ><a href="#" class="close-popup center">Fermer la fenêtre d'inscription</a></p>
+            <div id="invNum" style="visibility: hidden;">0</div>
         </div>
     </div>
 </div>
@@ -358,22 +360,24 @@
     }
 
     function login(network) {
-        var hi = hello(network);
-        hi.login().then(function (r) {
-                return hi.api('me').then(function (json) {
-                    user = json;
-                    user.connexion = network;
-                    $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", { facebookId: (user.connexion == 'facebook') ? user.id : "", googleId:  ((user.connexion == 'google')  ? user.id  : ""), name :  user.name, thumbnail : 0 },
-                        function(reponse) {
-                            user.token = reponse;
-                            localStorage.setItem('user',JSON.stringify(user));
-                            initIndexPage();
-                            myApp.closeModal('.login-screen');
-                    })
-                }, function (e) {
-                    alert('Whoops! ' + e.error.message);
-                });
-            })
+    	  if (validationCharte()) {
+		        var hi = hello(network);
+		        hi.login().then(function (r) {
+		                return hi.api('me').then(function (json) {
+		                    user = json;
+		                    user.connexion = network;
+		                    $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", { facebookId: (user.connexion == 'facebook') ? user.id : "", googleId:  ((user.connexion == 'google')  ? user.id  : ""), name :  user.name, thumbnail : 0 },
+		                        function(reponse) {
+		                            user.token = reponse;
+		                            localStorage.setItem('user',JSON.stringify(user));
+		                            initIndexPage();
+		                            myApp.closeModal('.login-screen');
+		                    })
+		                }, function (e) {
+		                    alert('Whoops! ' + e.error.message);
+		                });
+		            })
+         }
     }
 
     myApp.onPageInit('index', function (page) {
@@ -392,7 +396,19 @@
         xhr.setRequestHeader('Authorization',user.token);
     }
 
-    function initIndexPage () {
+	function validationCharte() {
+			var a = 0;
+  			 myApp.confirm(""+			"<div align='left'>Xenomorphe SARL offre, à des fins ludiques, un système de messagerie instantanée pour communiquer entre joueurs.<br /><br />"+			"La messagerie ne doit pas être utilisée pour diffuser des informations contraires à la morale et aux lois en vigueur.<br /><br />"+			"En cas de non-respect de ces directives, un modérateur peut sans préavis supprimer et exclure l'utilisateur de l'application.<br /> <br />"+			"Xenomorphe SARL se delecte de toutes responsabilités par rapport à l'application, la messagerie et les données.<br /><br />"+
+			"<b>En cliquant sur OK, je confirme l'approbation de ces règles.</b></div>"				,"Régles d'utilisation",function () {
+				a=1;
+				 $("#invNum").html(a);
+					}, function () {
+					a=0;
+					 $("#invNum").html(a);
+					});
+		}
+		
+    function initIndexPage () {    
         $.ajax({
             url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/me',
             type: 'GET',
@@ -420,36 +436,58 @@
     }
 
     /*********************************************** INSCRIPTION ET CONNEXION NATIVE ****************************************/
+	function testValide() {
+				 $("#invNum").html(0);
+				var validation=$("#invNum").text();
+     			if (validation==0){
+     					validationCharte();
+     			}	
+	}    
+    
     function inscriptionNative() {
+   
         var login_inscription = $("#login_inscription").val();
         var password_inscription = $("#password_inscription").val();
         var password_repeat_inscription = $("#password_repeat_inscription").val();
         var email_inscription = $("#email_inscription").val();
-
-        if(password_inscription == password_repeat_inscription) {
-            $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users/native",
-                {
-                    login: login_inscription,
-                    password : password_inscription,
-                    email :  email_inscription,
-                    thumbnail : 0
-                },
-                function (reponse) {
-                    if (reponse == false){
-                        myApp.alert("Nom d'utilisateur ou email existant","Erreur");
-                    }else {
-                        myApp.alert("", 'Inscription terminée avec succès');
-                        $("#login_native").val(login_inscription);
-                        $("#password_native").val(password_inscription);
-                        myApp.closeModal('.popup-inscription');
-                    }
-                }).fail(function() {
-                    alert( "error" );
-                })
-        }else {
-            alert('password incorrect');
-        }
-    }
+        
+        var validation=$("#invNum").text();
+     						 if (validation == 1 ){
+		        						if(password_inscription == password_repeat_inscription) {
+		         		  				 $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users/native",
+						             	   {
+						                  	  login: login_inscription,
+						                 	   password : password_inscription,
+						                 	   email :  email_inscription,
+						                  	  thumbnail : 0
+						               		 },
+						               		 function (reponse) {
+						                  		  if (reponse == false){
+						                        		myApp.alert("Nom d'utilisateur ou email existant","Erreur");
+						                 		   }else {
+						                			        myApp.alert("", 'Inscription terminée avec succès');
+						             				           $("#login_native").val(login_inscription);
+						               				         $("#password_native").val(password_inscription);
+						                   			     myApp.closeModal('.popup-inscription');
+						                   		 }
+						             		   }).fail(function() {
+						                  				  alert("error");
+						
+						            			    })
+						       			 }else {
+						           		 alert('password incorrect');
+						    	   			 }
+		        
+		 	 		 }else{
+							 myApp.confirm("Il faut valider les régles d'utilisation de l'application pour pouvoir vous inscrire.</br>","Attention",function () {
+							 validationCharte();
+							 	
+							 });		 	 		 
+		 	 		 }
+		 	 	 }
+		 	  
+		   
+    
 
     function connexionNative() {
         var login_native = $("#login_native").val();
