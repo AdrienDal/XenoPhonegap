@@ -117,4 +117,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <preference name="OverrideUserAgent" value="com.phonegap.helloworld/1.0.0" />
 </widget>

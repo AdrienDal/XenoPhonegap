@@ -118,4 +118,5 @@
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="CameraUsesGeolocation" value="false" />
     <preference name="android-minSdkVersion" value="14" />
+    <preference name="OverrideUserAgent" value="MyCordovaApp/1.2.3" />
 </widget>

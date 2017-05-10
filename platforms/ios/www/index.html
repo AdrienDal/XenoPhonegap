@@ -360,7 +360,7 @@
     }
 
     function login(network) {
-    	  if (validationCharte()) {
+    validationCharte();
 		        var hi = hello(network);
 		        hi.login().then(function (r) {
 		                return hi.api('me').then(function (json) {
@@ -377,7 +377,6 @@
 		                    alert('Whoops! ' + e.error.message);
 		                });
 		            })
-         }
     }
 
     myApp.onPageInit('index', function (page) {
