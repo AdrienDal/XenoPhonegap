@@ -633,6 +633,14 @@ module.exports = [
         "id": "cordova-plugin-email-composer.EmailComposerProxy",
         "pluginId": "cordova-plugin-email-composer",
         "runs": true
+    },
+    {
+        "file": "plugins/im.ltdev.cordova.UserAgent/www/UserAgent.js",
+        "id": "im.ltdev.cordova.UserAgent.UserAgent",
+        "pluginId": "im.ltdev.cordova.UserAgent",
+        "clobbers": [
+            "UserAgent"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -661,7 +669,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.2.2",
     "com.teamnemitoff.phonedialer": "0.3.0",
     "cordova-plugin-googlemaps": "1.4.0",
-    "cordova-plugin-email-composer": "0.8.3"
+    "cordova-plugin-email-composer": "0.8.3",
+    "im.ltdev.cordova.UserAgent": "0.1.0"
 }
 // BOTTOM OF METADATA
 });

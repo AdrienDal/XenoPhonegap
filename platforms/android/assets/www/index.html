@@ -2,12 +2,13 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-   <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inlin e' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <!-- Path to your custom app styles-->
@@ -35,46 +36,53 @@
 <div class="panel panel-left panel-reveal xenofont">
     <div class="list-block">
         <ul>
-            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('index.html');">
+            <li class="item-content animation close-panel" data-force="true"
+                onClick="mainView.router.loadPage('index.html');">
                 <div class="item-media"><i class="f7-icons size-18">data</i></div>
                 <div class="item-inner">
-                    <div class="item-title"> ACCUEIL </div>
+                    <div class="item-title"> ACCUEIL</div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('listechats.html');">
+            <li class="item-content animation close-panel" data-force="true"
+                onClick="mainView.router.loadPage('listechats.html');">
                 <div class="item-media"><i class="f7-icons size-18">chats</i></div>
                 <div class="item-inner">
-                    <div class="item-title"> Chat </div>
+                    <div class="item-title"> Chat</div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('evenements.html');">
+            <li class="item-content animation close-panel" data-force="true"
+                onClick="mainView.router.loadPage('evenements.html');">
                 <div class="item-media"><i class="f7-icons size-18">calendar</i></div>
                 <div class="item-inner">
-                    <div class="item-title"> Évènements </div>
+                    <div class="item-title"> Évènements</div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('news.html');">
+            <li class="item-content animation close-panel" data-force="true"
+                onClick="mainView.router.loadPage('news.html');">
                 <div class="item-media"><i class="f7-icons size-18">world</i></div>
                 <div class="item-inner">
-                    <div class="item-title"> Nouveautés </div>
+                    <div class="item-title"> Nouveautés</div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('mesjeux.html');" >
+            <li class="item-content animation close-panel" data-force="true"
+                onClick="mainView.router.loadPage('mesjeux.html');">
                 <div class="item-media"><i class="f7-icons size-18">star</i></div>
                 <div class="item-inner">
-                    <div class="item-title"> jeux </div>
+                    <div class="item-title"> jeux</div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true"  onClick="mainView.router.loadPage('profil.html');">
+            <li class="item-content animation close-panel" data-force="true"
+                onClick="mainView.router.loadPage('profil.html');">
                 <div class="item-media"><i class="f7-icons size-18">person</i></div>
                 <div class="item-inner">
-                    <div class="item-title"> Profil </div>
+                    <div class="item-title"> Profil</div>
                 </div>
             </li>
-            <li class="item-content animation close-panel" data-force="true" onClick="mainView.router.loadPage('contacts.html');">
+            <li class="item-content animation close-panel" data-force="true"
+                onClick="mainView.router.loadPage('contacts.html');">
                 <div class="item-media"><i class="f7-icons size-18">phone</i></div>
                 <div class="item-inner">
-                    <div class="item-title"> Contact </div>
+                    <div class="item-title"> Contact</div>
                 </div>
             </li>
         </ul>
@@ -103,49 +111,55 @@
                     <li class="item-content">
                         <div class="item-inner">
                             <div class="item-input">
-                                <input type="text" name="username" id="login_native" placeholder="Login" style="text-align: center;" />
+                                <input type="text" name="username" id="login_native" placeholder="Login"
+                                       style="text-align: center;"/>
                             </div>
                         </div>
                     </li>
                     <li class="item-content">
                         <div class="item-inner">
                             <div class="item-input">
-                                <input type="password" name="password" id="password_native" placeholder="Mot de passe" style="text-align: center;" />
+                                <input type="password" name="password" id="password_native" placeholder="Mot de passe"
+                                       style="text-align: center;"/>
                             </div>
                         </div>
                     </li>
-                        <p class="buttons-row">
-                            <a href="#" data-popup=".popup-inscription"  onclick="validationCharte();" class="button button-big color-white open-popup" style="border : none; margin-top: -10px;">Inscription</a>
-                            <a href="#" onclick="connexionNative();" class="button button-big color-white" style="border : none; margin-top: -10px;">Connexion</a>
-                        </p>
+                    <p class="buttons-row">
+                        <a href="#" data-popup=".popup-inscription" onclick="validationCharte();"
+                           class="button button-big color-white open-popup" style="border : none; margin-top: -10px;">Inscription</a>
+                        <a href="#" onclick="connexionNative();" class="button button-big color-white"
+                           style="border : none; margin-top: -10px;">Connexion</a>
+                    </p>
                 </ul>
             </div>
-          <!--  <div class="list-block-label">
-                <p>Veuillez vous connecter pour accéder aux contenus de l'application.</p>
-            </div>-->
+            <!--  <div class="list-block-label">
+                  <p>Veuillez vous connecter pour accéder aux contenus de l'application.</p>
+              </div>-->
         </form>
     </div>
 </div>
 <!-- popup inscription -->
-<div  class="popup popup-inscription tablet-fullscreen xenofont" >
-    <div  class="content-block">
+<div class="popup popup-inscription tablet-fullscreen xenofont">
+    <div class="content-block">
         <div class="list-block no-border">
-            <h2 style="text-align: center;" >Inscription</h2>
+            <h2 style="text-align: center;">Inscription</h2>
             <ul>
                 <li class="item-content">
                     <div class="item-media"><i class="icon f7-icons">person</i></div>
                     <div class="item-inner">
                         <div class="item-input">
-                            <input type="text" id="login_inscription" name="username" placeholder="Login" style="text-align: center; " />
+                            <input type="text" id="login_inscription" name="username" placeholder="Login"
+                                   style="text-align: center; "/>
                         </div>
-                        
+
                     </div>
                 </li>
                 <li class="item-content ">
                     <div class="item-media"><i class="icon f7-icons">lock</i></div>
                     <div class="item-inner">
                         <div class="item-input">
-                            <input type="password" id="password_inscription" name="password" placeholder="Mot de passe" style="text-align: center;" />
+                            <input type="password" id="password_inscription" name="password" placeholder="Mot de passe"
+                                   style="text-align: center;"/>
                         </div>
                     </div>
                 </li>
@@ -153,21 +167,24 @@
                     <div class="item-media"><i class="icon f7-icons">lock</i></div>
                     <div class="item-inner">
                         <div class="item-input">
-                            <input type="password" id="password_repeat_inscription" name="password" placeholder="Répéter le mot de passe" style="text-align: center;" />
+                            <input type="password" id="password_repeat_inscription" name="password"
+                                   placeholder="Répéter le mot de passe" style="text-align: center;"/>
                         </div>
                     </div>
                 </li>
                 <li class="item-content">
-                        <div class="item-media"><i class="icon f7-icons">email</i></div>
-                        <div class="item-inner">
-                            <div class="item-input ">
-                                <input type="email" id="email_inscription" placeholder="E-mail (Optionel)"  style="text-align: center;">
-                            </div>
+                    <div class="item-media"><i class="icon f7-icons">email</i></div>
+                    <div class="item-inner">
+                        <div class="item-input ">
+                            <input type="email" id="email_inscription" placeholder="E-mail (Optionel)"
+                                   style="text-align: center;">
                         </div>
+                    </div>
                 </li>
             </ul>
             <p><a href="#" class="button" onclick="inscriptionNative();">S'incrire</a></p>
-            <p style="text-align: center;" ><a href="#" class="close-popup center">Fermer la fenêtre d'inscription</a></p>
+            <p style="text-align: center;"><a href="#" class="close-popup center">Fermer la fenêtre d'inscription</a>
+            </p>
         </div>
     </div>
 </div>
@@ -176,13 +193,14 @@
 <div class="popup popup-profil tablet-fullscreen xenofont">
     <div class="content-block">
         <div class="list-block no-border">
-            <h2 style="text-align: center;" >Modification</h2>
+            <h2 style="text-align: center;">Modification</h2>
             <ul>
                 <li class="item-content">
                     <div class="item-media"><i class="icon f7-icons">person</i></div>
                     <div class="item-inner">
                         <div class="item-input">
-                            <input type="text" id="login_update" name="username" placeholder="Login" style="text-align: center; " />
+                            <input type="text" id="login_update" name="username" placeholder="Login"
+                                   style="text-align: center; "/>
                         </div>
                     </div>
                 </li>
@@ -191,7 +209,8 @@
                     <div class="item-media"><i class="icon f7-icons">email</i></div>
                     <div class="item-inner">
                         <div class="item-input ">
-                            <input type="email" id="email_Update" placeholder="E-mail (Optionel)"  style="text-align: center;">
+                            <input type="email" id="email_Update" placeholder="E-mail (Optionel)"
+                                   style="text-align: center;">
                         </div>
                     </div>
                 </li>
@@ -220,7 +239,8 @@
                 </div>
             </div>
             <p><a href="#" class="button" onclick="saveUpdateUser();">Sauvegarder</a></p>
-            <p style="text-align: center;" ><a href="#" class="close-popup center">Fermer la fenêtre de modification</a></p>
+            <p style="text-align: center;"><a href="#" class="close-popup center">Fermer la fenêtre de modification</a>
+            </p>
         </div>
     </div>
 </div>
@@ -260,7 +280,7 @@
                                 <ul>
                                     <li class="item-content">
                                         <div class="item-media">
-                                           <img id="imgUser" src="" width="44"/>
+                                            <img id="imgUser" src="" width="44"/>
                                         </div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
@@ -279,20 +299,39 @@
                         <ul>
                             <li>
                                 <span class="buttons-row"> 
-                                    <a  onClick="mainView.router.loadPage('listechats.html');" href="#" style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);" data-force="true" class="button button-raised button-fill "><i class="f7-icons size-15">chats</i> Chat</a>
-                                    <a onClick="mainView.router.loadPage('evenements.html');" href="#" style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);" data-force="true" class="button button-raised button-fill  "><i class="f7-icons size-15">calendar</i> évènements</a>
+                                    <a onClick="mainView.router.loadPage('listechats.html');" href="#"
+                                       style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);"
+                                       data-force="true" class="button button-raised button-fill "><i
+                                            class="f7-icons size-15">chats</i> Chat</a>
+                                    <a onClick="mainView.router.loadPage('evenements.html');" href="#"
+                                       style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);"
+                                       data-force="true" class="button button-raised button-fill  "><i
+                                            class="f7-icons size-15">calendar</i> évènements</a>
                                 </span>
                             </li>
                             <li>
                                 <span class="buttons-row">
-                                    <a onClick="mainView.router.loadPage('news.html');"  href="#" style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);" data-force="true" class="button button-raised button-fill "><i class="f7-icons size-15">world</i> Nouveautés</a>
-                                		<a onClick="mainView.router.loadPage('mesjeux.html');" data-force="true" href="#" style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);" class="button button-raised button-fill "><i class="f7-icons size-15">star</i> jeux </a>
+                                    <a onClick="mainView.router.loadPage('news.html');" href="#"
+                                       style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);"
+                                       data-force="true" class="button button-raised button-fill "><i
+                                            class="f7-icons size-15">world</i> Nouveautés</a>
+                                		<a onClick="mainView.router.loadPage('mesjeux.html');" data-force="true"
+                                           href="#"
+                                           style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);"
+                                           class="button button-raised button-fill "><i
+                                                class="f7-icons size-15">star</i> jeux </a>
                                 </span>
                             </li>
                             <li>
                                 <span class="buttons-row">
-                                    <a onClick="mainView.router.loadPage('profil.html');" href="#" style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);" data-force="true" class="button button-raised button-fill "><i class="f7-icons size-15">person</i> Profil </a>
-                                    <a onClick="mainView.router.loadPage('contacts.html');" href="#" style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);" data-force="true" class="button button-raised button-fill "><i class="f7-icons size-15">info</i> Contacts</a>
+                                    <a onClick="mainView.router.loadPage('profil.html');" href="#"
+                                       style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);"
+                                       data-force="true" class="button button-raised button-fill "><i
+                                            class="f7-icons size-15">person</i> Profil </a>
+                                    <a onClick="mainView.router.loadPage('contacts.html');" href="#"
+                                       style="height : 80px;padding-top: 20px;background-color:rgb(116,5,9);"
+                                       data-force="true" class="button button-raised button-fill "><i
+                                            class="f7-icons size-15">info</i> Contacts</a>
                                 </span>
                             </li>
                         </ul>
@@ -310,24 +349,28 @@
 <script type="text/javascript" src="bower_components/framework7/dist/js/framework7.min.js"></script>
 <script type="text/javascript" src="bower_components/framework7/dist/js/my-app.js"></script>
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyDRon-omCkfTbKnilbH2V-ywUozN8vcV0E&libraries=places" type="text/javascript"></script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDRon-omCkfTbKnilbH2V-ywUozN8vcV0E&libraries=places"
+        type="text/javascript"></script>
 
 <script type="text/javascript">
     app.initialize();
+
+    UserAgent.set("Mozilla/5.0 (Linux; U; Android 4.4 Andro-id Build/KRT16S; X11; FxOS armv7I rv:29.0) MyWebkit/537.51.1 (KHTML, like Gecko) Gecko/29.0 Firefox/29.0 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_9_1; en-ID) MyWebKit/537.51.1 (KHTML, like Gecko) Chrome/34.0.17");
+
     var mainView;
     var user = "";
     var map = "";
     var apiHost = "http://adrien.dallinge.ch/cave/wp-json";
     var myApp = new Framework7({
         swipePanel: 'left',
-        tapHold : true,
-        tapHoldDelay : 1000
+        tapHold: true,
+        tapHoldDelay: 1000
     });
 
     var $$ = Dom7;
     mainView = myApp.addView('.view-main', {
-         dynamicNavbar: true
-     });
+        dynamicNavbar: true
+    });
 
     hello.init({
         google: '656984324806-sr0q9vq78tlna4hvhlmcgp2bs2ut8uj8.apps.googleusercontent.com',
@@ -336,82 +379,86 @@
         redirect_uri: 'https://adodson.com/hello.js/redirect.html'
     });
 
-    if (localStorage.getItem('login_native') != 'undefined' && localStorage.getItem('password_native') != 'undefined'){
+    if (localStorage.getItem('login_native') != 'undefined' && localStorage.getItem('password_native') != 'undefined') {
         $("#login_native").val(localStorage.getItem('login_native'));
         $("#password_native").val(localStorage.getItem('password_native'));
     }
 
-    if (localStorage.getItem('user') != 'undefined' ) {
+    if (localStorage.getItem('user') != 'undefined') {
         user = JSON.parse(localStorage.getItem('user'));
-        initIndexPage ()
+        initIndexPage()
         myApp.closeModal('.login-screen');
     }
 
     function logout() {
         user = "";
         localStorage.removeItem('user');
-        hello(user.connexion).logout().then(function() {
+        hello(user.connexion).logout().then(function () {
             alert('Signed out');
-        }, function(e) {
+        }, function (e) {
             alert('Signed out');
         });
         myApp.loginScreen();
     }
 
     function login(network) {
-		        var hi = hello(network);
-		        hi.login().then(function (r) {
-		                return hi.api('me').then(function (json) {
-		                    user = json;
-		                    user.connexion = network;
-		                    $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", { facebookId: (user.connexion == 'facebook') ? user.id : "", googleId:  ((user.connexion == 'google')  ? user.id  : ""), name :  user.name, thumbnail : user.thumbnail},
-		                        function(reponse) {
-		                            user.token = reponse;
-		                            localStorage.setItem('user',JSON.stringify(user));
-		                            initIndexPage();
-		                            myApp.closeModal('.login-screen');
-		                    })
-		                }, function (e) {
-		                    alert('Whoops! ' + e.error.message);
-		                });
-		            })
+        var hi = hello(network);
+        hi.login().then(function (r) {
+            return hi.api('me').then(function (json) {
+                user = json;
+                user.connexion = network;
+                $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", {
+                        facebookId: (user.connexion == 'facebook') ? user.id : "",
+                        googleId: ((user.connexion == 'google') ? user.id : ""),
+                        name: user.name,
+                        thumbnail: user.thumbnail
+                    },
+                    function (reponse) {
+                        user.token = reponse;
+                        localStorage.setItem('user', JSON.stringify(user));
+                        initIndexPage();
+                        myApp.closeModal('.login-screen');
+                    })
+            }, function (e) {
+                alert('Whoops! ' + e.error.message);
+            });
+        })
     }
 
     myApp.onPageInit('index', function (page) {
-        initIndexPage ();
+        initIndexPage();
     });
 
     /*$$(document).on('page:init', function (e) {
-        initIndexPage ();
-    });*/
+     initIndexPage ();
+     });*/
 
-    myApp.onPageBack('index', function(page) {
-        initIndexPage ();
+    myApp.onPageBack('index', function (page) {
+        initIndexPage();
     });
 
-    function setHeader(xhr){
-        xhr.setRequestHeader('Authorization',user.token);
+    function setHeader(xhr) {
+        xhr.setRequestHeader('Authorization', user.token);
     }
 
-	
-		
-    function initIndexPage () {    
+
+    function initIndexPage() {
         $.ajax({
             url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/me',
             type: 'GET',
             dataType: 'json',
             beforeSend: setHeader
-        }).done(function( data ) {
+        }).done(function (data) {
             user.name = data.name;
             user.thumbnail = data.thumbnail;
             user.connexion = data.connexion;
             user.id = data.id_user;
 
             $("#nameUser").html(user.name);
-            $("#imgUser").prop('src', "./img/avatar/"+user.thumbnail+".png");
+            $("#imgUser").prop('src', "./img/avatar/" + user.thumbnail + ".png");
             $("#viaUser").html("via " + user.connexion);
 
-            if (data.first_connect < 1){
+            if (data.first_connect < 1) {
                 $.ajax({
                     url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/firstconnect',
                     type: 'PUT',
@@ -425,71 +472,76 @@
     /*********************************************** INSCRIPTION ET CONNEXION NATIVE ****************************************/
 
     function validationCharte() {
-	
-  			 myApp.confirm(""+			"<div align='left'>Xenomorphe SARL offre, à des fins ludiques, un système de messagerie instantanée pour communiquer entre joueurs.<br /><br />"+			"La messagerie ne doit pas être utilisée pour diffuser des informations contraires à la morale et aux lois en vigueur.<br /><br />"+			"En cas de non-respect de ces directives, un modérateur peut sans préavis supprimer et exclure l'utilisateur de l'application.<br /> <br />"+			"Xenomorphe SARL se delecte de toutes responsabilités par rapport à l'application, la messagerie et les données.<br /><br />"+
-			"<b>En cliquant sur OK, je confirme l'approbation de ces règles.</b></div>"				,"Régles d'utilisation",function () {
-				
-					}, function () {
-					 myApp.closeModal('.popup-inscription');
-					});
-		}
-		
+
+        myApp.confirm("" +
+            "<div align='left'>Xenomorphe SARL offre, à des fins ludiques, un système de messagerie instantanée pour communiquer entre joueurs.<br /><br />" +
+            "La messagerie ne doit pas être utilisée pour diffuser des informations contraires à la morale et aux lois en vigueur.<br /><br />" +
+            "En cas de non-respect de ces directives, un modérateur peut sans préavis supprimer et exclure l'utilisateur de l'application.<br /> <br />" +
+            "Xenomorphe SARL se delecte de toutes responsabilités par rapport à l'application, la messagerie et les données.<br /><br />" +
+            "<b>En cliquant sur OK, je confirme l'approbation de ces règles.</b></div>"
+            , "Régles d'utilisation", function () {
+
+            }, function () {
+                myApp.closeModal('.popup-inscription');
+            });
+    }
+
     function inscriptionNative() {
-   
+
         var login_inscription = $("#login_inscription").val();
         var password_inscription = $("#password_inscription").val();
         var password_repeat_inscription = $("#password_repeat_inscription").val();
         var email_inscription = $("#email_inscription").val();
-        
-      
-		        						if(password_inscription == password_repeat_inscription) {
-		         		  				 $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users/native",
-						             	   {
-						                  	  login: login_inscription,
-						                 	   password : password_inscription,
-						                 	   email :  email_inscription,
-						                  	  thumbnail : 0
-						               		 },
-						               		 function (reponse) {
-						                  		  if (reponse == false){
-						                        		myApp.alert("Nom d'utilisateur ou email existant","Erreur");
-						                 		   }else {
-						                			        myApp.alert("", 'Inscription terminée avec succès');
-						             				           $("#login_native").val(login_inscription);
-						               				         $("#password_native").val(password_inscription);
-						                   			     myApp.closeModal('.popup-inscription');
-						                   		 }
-						             		   }).fail(function() {
-						                  				  alert("error");
-						
-						            			    })
-						       			 }else {
-						           		 alert('password incorrect');
-						    	   			 }
-		        
-		 	 		 
-		 	 	 }
-		 	  
-		   
-    
+
+
+        if (password_inscription == password_repeat_inscription) {
+            $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users/native",
+                {
+                    login: login_inscription,
+                    password: password_inscription,
+                    email: email_inscription,
+                    thumbnail: 0
+                },
+                function (reponse) {
+                    if (reponse == false) {
+                        myApp.alert("Nom d'utilisateur ou email existant", "Erreur");
+                    } else {
+                        myApp.alert("", 'Inscription terminée avec succès');
+                        $("#login_native").val(login_inscription);
+                        $("#password_native").val(password_inscription);
+                        myApp.closeModal('.popup-inscription');
+                    }
+                }).fail(function () {
+                alert("error");
+
+            })
+        } else {
+            alert('password incorrect');
+        }
+
+
+    }
+
 
     function connexionNative() {
         var login_native = $("#login_native").val();
         var password_native = $("#password_native").val();
-        if(login_native.length > 0 && password_native.length > 0) {
-            $.post("http://adrien.dallinge.ch/cave/wp-json/jwt-auth/v1/token", {username : login_native, password : password_native}, function(reponse){
+        if (login_native.length > 0 && password_native.length > 0) {
+            $.post("http://adrien.dallinge.ch/cave/wp-json/jwt-auth/v1/token", {
+                username: login_native,
+                password: password_native
+            }, function (reponse) {
                 user = reponse;
-                localStorage.setItem('user',JSON.stringify(user));
-                localStorage.setItem('login_native',login_native);
-                localStorage.setItem('password_native',password_native);
+                localStorage.setItem('user', JSON.stringify(user));
+                localStorage.setItem('login_native', login_native);
+                localStorage.setItem('password_native', password_native);
                 initIndexPage();
                 myApp.closeModal('.login-screen');
-            }).fail(function() {
-                alert( "error" );
+            }).fail(function () {
+                alert("error");
             });
         }
     }
-
 
 
 </script>
