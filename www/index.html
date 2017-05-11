@@ -86,12 +86,12 @@
             <img id="xenologo" src="img/xenomorphe_logo_white_LD.png"/></div>
         <form>
             <p class="buttons-row ">
-                <a href="#" onclick="login('google')"
+                <a href="#" onclick="login('google');"
                    class="button button-big button-fill color-red"><i class="f7-icons size-22">social_googleplus</i>
                     Google</a>
             </p>
             <p class="buttons-row ">
-                <a href="#" onclick="login('facebook')"
+                <a href="#" onclick="login('facebook');"
                    class="button button-big button-fill color-blue "><i class="f7-icons size-22">social_facebook</i>
                     Facebook</a>
             </p>
@@ -115,7 +115,7 @@
                         </div>
                     </li>
                         <p class="buttons-row">
-                            <a href="#" data-popup=".popup-inscription"  onclick="testValide();" class="button button-big color-white open-popup" style="border : none; margin-top: -10px;">Inscription</a>
+                            <a href="#" data-popup=".popup-inscription"  onclick="validationCharte();" class="button button-big color-white open-popup" style="border : none; margin-top: -10px;">Inscription</a>
                             <a href="#" onclick="connexionNative();" class="button button-big color-white" style="border : none; margin-top: -10px;">Connexion</a>
                         </p>
                 </ul>
@@ -168,7 +168,6 @@
             </ul>
             <p><a href="#" class="button" onclick="inscriptionNative();">S'incrire</a></p>
             <p style="text-align: center;" ><a href="#" class="close-popup center">Fermer la fenêtre d'inscription</a></p>
-            <div id="invNum" style="visibility: hidden;">0</div>
         </div>
     </div>
 </div>
@@ -360,13 +359,12 @@
     }
 
     function login(network) {
-    validationCharte();
 		        var hi = hello(network);
 		        hi.login().then(function (r) {
 		                return hi.api('me').then(function (json) {
 		                    user = json;
 		                    user.connexion = network;
-		                    $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", { facebookId: (user.connexion == 'facebook') ? user.id : "", googleId:  ((user.connexion == 'google')  ? user.id  : ""), name :  user.name, thumbnail : 0 },
+		                    $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", { facebookId: (user.connexion == 'facebook') ? user.id : "", googleId:  ((user.connexion == 'google')  ? user.id  : ""), name :  user.name, thumbnail : user.thumbnail},
 		                        function(reponse) {
 		                            user.token = reponse;
 		                            localStorage.setItem('user',JSON.stringify(user));
@@ -395,17 +393,7 @@
         xhr.setRequestHeader('Authorization',user.token);
     }
 
-	function validationCharte() {
-			var a = 0;
-  			 myApp.confirm(""+			"<div align='left'>Xenomorphe SARL offre, à des fins ludiques, un système de messagerie instantanée pour communiquer entre joueurs.<br /><br />"+			"La messagerie ne doit pas être utilisée pour diffuser des informations contraires à la morale et aux lois en vigueur.<br /><br />"+			"En cas de non-respect de ces directives, un modérateur peut sans préavis supprimer et exclure l'utilisateur de l'application.<br /> <br />"+			"Xenomorphe SARL se delecte de toutes responsabilités par rapport à l'application, la messagerie et les données.<br /><br />"+
-			"<b>En cliquant sur OK, je confirme l'approbation de ces règles.</b></div>"				,"Régles d'utilisation",function () {
-				a=1;
-				 $("#invNum").html(a);
-					}, function () {
-					a=0;
-					 $("#invNum").html(a);
-					});
-		}
+	
 		
     function initIndexPage () {    
         $.ajax({
@@ -435,14 +423,17 @@
     }
 
     /*********************************************** INSCRIPTION ET CONNEXION NATIVE ****************************************/
-	function testValide() {
-				 $("#invNum").html(0);
-				var validation=$("#invNum").text();
-     			if (validation==0){
-     					validationCharte();
-     			}	
-	}    
-    
+
+    function validationCharte() {
+	
+  			 myApp.confirm(""+			"<div align='left'>Xenomorphe SARL offre, à des fins ludiques, un système de messagerie instantanée pour communiquer entre joueurs.<br /><br />"+			"La messagerie ne doit pas être utilisée pour diffuser des informations contraires à la morale et aux lois en vigueur.<br /><br />"+			"En cas de non-respect de ces directives, un modérateur peut sans préavis supprimer et exclure l'utilisateur de l'application.<br /> <br />"+			"Xenomorphe SARL se delecte de toutes responsabilités par rapport à l'application, la messagerie et les données.<br /><br />"+
+			"<b>En cliquant sur OK, je confirme l'approbation de ces règles.</b></div>"				,"Régles d'utilisation",function () {
+				
+					}, function () {
+					 myApp.closeModal('.popup-inscription');
+					});
+		}
+		
     function inscriptionNative() {
    
         var login_inscription = $("#login_inscription").val();
@@ -450,8 +441,7 @@
         var password_repeat_inscription = $("#password_repeat_inscription").val();
         var email_inscription = $("#email_inscription").val();
         
-        var validation=$("#invNum").text();
-     						 if (validation == 1 ){
+      
 		        						if(password_inscription == password_repeat_inscription) {
 		         		  				 $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users/native",
 						             	   {
@@ -477,12 +467,7 @@
 						           		 alert('password incorrect');
 						    	   			 }
 		        
-		 	 		 }else{
-							 myApp.confirm("Il faut valider les régles d'utilisation de l'application pour pouvoir vous inscrire.</br>","Attention",function () {
-							 validationCharte();
-							 	
-							 });		 	 		 
-		 	 		 }
+		 	 		 
 		 	 	 }
 		 	  
 		   
