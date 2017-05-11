@@ -67,6 +67,10 @@
                         {
                             "xml": "<feature name=\"EmailComposer\"><param name=\"ios-package\" value=\"APPEmailComposer\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UserAgent\"><param name=\"ios-package\" value=\"UserAgent\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -136,6 +140,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "im.ltdev.cordova.UserAgent": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
@@ -594,6 +601,14 @@
                 "cordova.plugins.email",
                 "plugin.email"
             ]
+        },
+        {
+            "id": "im.ltdev.cordova.UserAgent.UserAgent",
+            "file": "plugins/im.ltdev.cordova.UserAgent/www/UserAgent.js",
+            "pluginId": "im.ltdev.cordova.UserAgent",
+            "clobbers": [
+                "UserAgent"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -612,6 +627,7 @@
         "cordova-plugin-geolocation": "2.1.0",
         "cordova-plugin-globalization": "1.0.5",
         "cordova-plugin-email-composer": "0.8.3",
-        "cordova-plugin-whitelist": "1.2.2"
+        "cordova-plugin-whitelist": "1.2.2",
+        "im.ltdev.cordova.UserAgent": "0.1.0"
     }
 }

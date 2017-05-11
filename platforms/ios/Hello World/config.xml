@@ -58,6 +58,9 @@
     <feature name="EmailComposer">
         <param name="ios-package" value="APPEmailComposer" />
     </feature>
+    <feature name="UserAgent">
+        <param name="ios-package" value="UserAgent" />
+    </feature>
     <name>Hello World</name>
     <description>
         Hello World sample application that responds to the deviceready event.

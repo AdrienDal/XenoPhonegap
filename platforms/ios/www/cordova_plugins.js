@@ -453,6 +453,14 @@ module.exports = [
             "cordova.plugins.email",
             "plugin.email"
         ]
+    },
+    {
+        "id": "im.ltdev.cordova.UserAgent.UserAgent",
+        "file": "plugins/im.ltdev.cordova.UserAgent/www/UserAgent.js",
+        "pluginId": "im.ltdev.cordova.UserAgent",
+        "clobbers": [
+            "UserAgent"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -473,7 +481,8 @@ module.exports.metadata =
     "cordova-plugin-geolocation": "2.1.0",
     "cordova-plugin-globalization": "1.0.5",
     "cordova-plugin-email-composer": "0.8.3",
-    "cordova-plugin-whitelist": "1.2.2"
+    "cordova-plugin-whitelist": "1.2.2",
+    "im.ltdev.cordova.UserAgent": "0.1.0"
 };
 // BOTTOM OF METADATA
 });

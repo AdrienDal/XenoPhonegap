@@ -169,21 +169,21 @@ function showOrHideFavChats(favoris) {
 
 $(document).on('touchstart',"div.message-sent > div.message-text", function (event){
     if ($(event.target).hasClass('message-sent')) {
-        var msgtodel = event.target;
+        var msgtodel = event.currentTarget;
     } else {
-        var msgtodel = event.target.parentNode;
+        var msgtodel = event.currentTarget.parentNode;
     }
     $(msgtodel).append("<img src='./img/loader.gif' width='120' id='loaderMsg' style='position : absolute; margin-left : -80px; margin-top : -74px;' />");
 }).on('touchend',"div.message-sent", function(){
     $("#loaderMsg").remove();
 });
 
-$$(document).on("taphold","div.message-sent > div.message-text",function (event){
+$(document).on("taphold","div.message-sent > div.message-text",function (event){
         $("#loaderMsg").remove();
         if ($(event.target).hasClass('message-sent')) {
-            var msgtodel = event.target;
+            var msgtodel = event.currentTarget;
         } else {
-            var msgtodel = event.target.parentNode;
+            var msgtodel = event.currentTarget.parentNode;
         }
         var idmsg = $(msgtodel).attr('tag');
         myApp.confirm('êtes-vous sûr?', 'Supprimer le message : '+ $(msgtodel).html(),
