@@ -171,7 +171,7 @@ $(document).on('touchstart',"div.message-sent > div.message-text", function (eve
     if ($(event.target).hasClass('message-sent')) {
         var msgtodel = event.currentTarget;
     } else {
-        var msgtodel = event.event.currentTarget.parentNode;
+        var msgtodel = event.currentTarget.parentNode;
     }
     $(msgtodel).append("<img src='./img/loader.gif' width='120' id='loaderMsg' style='position : absolute; margin-left : -80px; margin-top : -74px;' />");
 }).on('touchend',"div.message-sent", function(){

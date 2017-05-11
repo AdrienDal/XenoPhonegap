@@ -72,6 +72,9 @@
         },
         "cordova-plugin-email-composer": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "im.ltdev.cordova.UserAgent": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {
