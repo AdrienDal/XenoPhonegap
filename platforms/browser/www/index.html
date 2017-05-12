@@ -93,11 +93,12 @@
         <div class="login-screen-title">
             <img id="xenologo" src="img/xenomorphe_logo_white_LD.png"/></div>
         <form>
-            <p class="buttons-row ">
+        <!--    <p class="buttons-row ">
                 <a href="#" onclick="login('google');"
                    class="button button-big button-fill color-red"><i class="f7-icons size-22">social_googleplus</i>
                     Google</a>
-            </p>
+            </p>-->
+            <br />
             <p class="buttons-row ">
                 <a href="#" onclick="login('facebook');"
                    class="button button-big button-fill color-blue "><i class="f7-icons size-22">social_facebook</i>
@@ -204,12 +205,29 @@
                         </div>
                     </div>
                 </li>
-
+                <li class="item-content ">
+                    <div class="item-media"><i class="icon f7-icons">lock</i></div>
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <input type="password" id="password_update" name="password" placeholder="Nouveau mot de passe"
+                                   style="text-align: center;"/>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-content ">
+                    <div class="item-media"><i class="icon f7-icons">lock</i></div>
+                    <div class="item-inner">
+                        <div class="item-input">
+                            <input type="password" id="password_repeat_update" name="password"
+                                   placeholder="Répéter le mot de passe" style="text-align: center;"/>
+                        </div>
+                    </div>
+                </li>
                 <li class="item-content">
                     <div class="item-media"><i class="icon f7-icons">email</i></div>
                     <div class="item-inner">
                         <div class="item-input ">
-                            <input type="email" id="email_Update" placeholder="E-mail (Optionel)"
+                            <input type="email" id="email_update" placeholder="E-mail"
                                    style="text-align: center;">
                         </div>
                     </div>
@@ -217,28 +235,28 @@
             </ul>
             <div id="listeAvatar">
                 <div class="row">
-                    <div class="col-auto"><img id="img0" class="choixAvatar" src="./img/avatar/0.png"/></div>
-                    <div class="col-auto"><img id="img1" class="choixAvatar" src="./img/avatar/1.png"/></div>
-                    <div class="col-auto"><img id="img2" class="choixAvatar" src="./img/avatar/2.png"/></div>
-                    <div class="col-auto"><img id="img3" class="choixAvatar" src="./img/avatar/3.png"/></div>
-                    <div class="col-auto"><img id="img4" class="choixAvatar" src="./img/avatar/4.png"/></div>
+                    <div class="col-auto"><img id="img0" tag="0" class="choixAvatar" src="./img/avatar/0.png"/></div>
+                    <div class="col-auto"><img id="img1" tag="1" class="choixAvatar" src="./img/avatar/1.png"/></div>
+                    <div class="col-auto"><img id="img2" tag="2" class="choixAvatar" src="./img/avatar/2.png"/></div>
+                    <div class="col-auto"><img id="img3" tag="3" class="choixAvatar" src="./img/avatar/3.png"/></div>
+                    <div class="col-auto"><img id="img4" tag="4" class="choixAvatar" src="./img/avatar/4.png"/></div>
                 </div>
                 <div class="row">
-                    <div class="col-auto"><img id="img5" class="choixAvatar" src="./img/avatar/5.png"/></div>
-                    <div class="col-auto"><img id="img6" class="choixAvatar" src="./img/avatar/6.png"/></div>
-                    <div class="col-auto"><img id="img7" class="choixAvatar" src="./img/avatar/7.png"/></div>
-                    <div class="col-auto"><img id="img8" class="choixAvatar" src="./img/avatar/8.png"/></div>
-                    <div class="col-auto"><img id="img9" class="choixAvatar" src="./img/avatar/9.png"/></div>
+                    <div class="col-auto"><img id="img5" tag="5"  class="choixAvatar" src="./img/avatar/5.png"/></div>
+                    <div class="col-auto"><img id="img6" tag="6"  class="choixAvatar" src="./img/avatar/6.png"/></div>
+                    <div class="col-auto"><img id="img7" tag="7" class="choixAvatar" src="./img/avatar/7.png"/></div>
+                    <div class="col-auto"><img id="img8" tag="8" class="choixAvatar" src="./img/avatar/8.png"/></div>
+                    <div class="col-auto"><img id="img9" tag="9" class="choixAvatar" src="./img/avatar/9.png"/></div>
                 </div>
                 <div class="row">
-                    <div class="col-auto"><img id="img10" class="choixAvatar" src="./img/avatar/10.png"/></div>
-                    <div class="col-auto"><img id="img11" class="choixAvatar" src="./img/avatar/11.png"/></div>
-                    <div class="col-auto"><img id="img12" class="choixAvatar" src="./img/avatar/12.png"/></div>
-                    <div class="col-auto"><img id="img13" class="choixAvatar" src="./img/avatar/13.png"/></div>
-                    <div class="col-auto"><img id="img14" class="choixAvatar" src="./img/avatar/14.png"/></div>
+                    <div class="col-auto"><img id="img10" tag="10" class="choixAvatar" src="./img/avatar/10.png"/></div>
+                    <div class="col-auto"><img id="img11" tag="11" class="choixAvatar" src="./img/avatar/11.png"/></div>
+                    <div class="col-auto"><img id="img12" tag="12" class="choixAvatar" src="./img/avatar/12.png"/></div>
+                    <div class="col-auto"><img id="img13" tag="13" class="choixAvatar" src="./img/avatar/13.png"/></div>
+                    <div class="col-auto"><img id="img14" tag="14" class="choixAvatar" src="./img/avatar/14.png"/></div>
                 </div>
             </div>
-            <p><a href="#" class="button" onclick="saveUpdateUser();">Sauvegarder</a></p>
+            <p><a href="#" class="button" onclick="updateProfil();">Sauvegarder</a></p>
             <p style="text-align: center;"><a href="#" class="close-popup center">Fermer la fenêtre de modification</a>
             </p>
         </div>
@@ -355,8 +373,6 @@
 <script type="text/javascript">
     app.initialize();
 
-    UserAgent.set("Mozilla/5.0 (Linux; U; Android 4.4 Andro-id Build/KRT16S; X11; FxOS armv7I rv:29.0) MyWebkit/537.51.1 (KHTML, like Gecko) Gecko/29.0 Firefox/29.0 Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_9_1; en-ID) MyWebKit/537.51.1 (KHTML, like Gecko) Chrome/34.0.17");
-
     var mainView;
     var user = "";
     var map = "";
@@ -452,6 +468,7 @@
             user.name = data.name;
             user.thumbnail = data.thumbnail;
             user.connexion = data.connexion;
+            user.email = data.email;
             user.id = data.id_user;
 
             $("#nameUser").html(user.name);
@@ -474,7 +491,7 @@
     function validationCharte() {
 
         myApp.confirm("" +
-            "<div align='left'>Xenomorphe SARL offre, à des fins ludiques, un système de messagerie instantanée pour communiquer entre joueurs.<br /><br />" +
+            "<div align='left' style='text-transform:  none; font-size : 12px; ' >Xenomorphe SARL offre, à des fins ludiques, un système de messagerie instantanée pour communiquer entre joueurs.<br /><br />" +
             "La messagerie ne doit pas être utilisée pour diffuser des informations contraires à la morale et aux lois en vigueur.<br /><br />" +
             "En cas de non-respect de ces directives, un modérateur peut sans préavis supprimer et exclure l'utilisateur de l'application.<br /> <br />" +
             "Xenomorphe SARL se delecte de toutes responsabilités par rapport à l'application, la messagerie et les données.<br /><br />" +
@@ -542,6 +559,7 @@
             });
         }
     }
+
 
 
 </script>

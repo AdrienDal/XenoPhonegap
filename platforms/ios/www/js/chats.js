@@ -73,7 +73,7 @@ function getBeforeMessages(async) {
                 myMessages.prependMessage({
                     text: value.message_texte,
                     date: value.message_datetime,
-                    name: value.display_name,
+                    name: value.user_login,
                     avatar: "./img/avatar/"+value.image+".png",
                     id : value.id_message,
                     type: (user.id == value.id_user) ? 'sent' : 'received'
@@ -126,7 +126,7 @@ function initListeChatsPage() {
                 "<div class='item-text'>Soyez le premier à écrire dans ce chat !</div>" +
                 "</div>" :
                 lastmsg = "<div class='item-subtitle'>" + $(this)[0].lastMsg[0].message_datetime +"</div>" +
-                "<div class='item-text'>"+  $(this)[0].lastMsg[0].display_name +" : "+  $(this)[0].lastMsg[0].message_texte +"</div>" +
+                "<div class='item-text'>"+  $(this)[0].lastMsg[0].user_login +" : "+  $(this)[0].lastMsg[0].message_texte +"</div>" +
                 "</div>";
             $("#listViewChats").append("" +
                 "<li class='" + fav + "' onClick=\"mainView.router.loadPage('chats.html?id="+$(this)[0].ID+"&title="+$(this)[0].post_title+"')\">" +

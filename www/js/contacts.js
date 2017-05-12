@@ -17,11 +17,7 @@ function sendEmail() {
     if (device.platform == "iOS") {
         window.open("mailto:dallingea@gmail.com", "_blank");
     }else if(device.platform == "Android") {
-        alert('a');
-        cordova.plugins.email.isAvailable( function(isAvailable) {
-            alert ('ok');
-        })
-            cordova.plugins.email.open();
+       myApp.alert("Fonctionnalité indisponible pour le moment, veuillez contactez le magasin à l'adresse suivante: <br /> dallingea@gmail.com" ,"Information");
     }
 }
 
