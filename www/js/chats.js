@@ -34,7 +34,7 @@ function initChatsPage(id,title) {
 function getLastMessages(async) {
     var chatMessages = [];
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/getlastchatmessages/'+idpost+'?premier='+idDernierMsg+'&nombre=30',
+        url: apiHost+'/xeno/users/chats/'+idpost+'/messages/last?premier='+idDernierMsg+'&nombre=30',
         type: 'GET',
         dataType: 'json',
         async : async,
@@ -63,7 +63,7 @@ function getBeforeMessages(async) {
     var chatMessages = [];
     loadMessageProcess = true;
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/getchatmessages/'+idpost+'?premier='+idPremierMsg+'&nombre=10',
+        url: apiHost+'/xeno/users/chats/'+idpost+'/messages?premier='+idPremierMsg+'&nombre=10',
         type: 'GET',
         dataType: 'json',
         async : async,
@@ -91,10 +91,10 @@ function envoieMsg() {
     var messageText = $("#tAMessage").val().trim();
     $("#tAMessage").val('');
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/addmessage',
+        url: apiHost+'/xeno/users/chats/'+idpost+'/messages',
         type: 'POST',
         dataType: 'json',
-        data: {"post": idpost, "message": messageText},
+        data: {"message": messageText},
         beforeSend: setHeader
     }).done(function(response) {
         idDernierMsg = response;
@@ -112,7 +112,7 @@ function envoieMsg() {
 
 function initListeChatsPage() {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/getchats',
+        url: apiHost+'/xeno/users/chats',
         type: 'GET',
         dataType: 'json',
         beforeSend: setHeader
@@ -189,7 +189,7 @@ $(document).on("taphold","div.message-sent > div.message-text",function (event){
         myApp.confirm('êtes-vous sûr?', 'Supprimer le message : '+ $(msgtodel).html(),
             function () {
                 $.ajax({
-                    url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/chats/' +idpost + '/messages/'+ idmsg,
+                    url: apiHost+'/xeno/users/chats/' +idpost + '/messages/'+ idmsg,
                     type: 'DELETE',
                     dataType: 'json',
                     beforeSend: setHeader

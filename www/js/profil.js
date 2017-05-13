@@ -58,7 +58,7 @@ function updateProfil(){
     }
 
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/me',
+        url: apiHost+'/xeno/users/me',
         type: 'PUT',
         dataType: 'json',
         data: {"login": login_update, "image":  user.thumbnail, "boolpassword" : bool_password ,"email" : email, "password" : password_update },
