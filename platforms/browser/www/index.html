@@ -423,7 +423,7 @@
             return hi.api('me').then(function (json) {
                 user = json;
                 user.connexion = network;
-                $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users", {
+                $.post(apiHost+"/xeno/users", {
                         facebookId: (user.connexion == 'facebook') ? user.id : "",
                         googleId: ((user.connexion == 'google') ? user.id : ""),
                         name: user.name,
@@ -460,7 +460,7 @@
 
     function initIndexPage() {
         $.ajax({
-            url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/me',
+            url: apiHost+'/xeno/users/me',
             type: 'GET',
             dataType: 'json',
             beforeSend: setHeader
@@ -470,14 +470,19 @@
             user.connexion = data.connexion;
             user.email = data.email;
             user.id = data.id_user;
+            user.role = data.role;
 
             $("#nameUser").html(user.name);
             $("#imgUser").prop('src', "./img/avatar/" + user.thumbnail + ".png");
-            $("#viaUser").html("via " + user.connexion);
+            if (user.role == "administrator" || user.role == "bbp_moderator") {
+                $("#viaUser").html("rôle " + user.role);
+            }else {
+                $("#viaUser").html("via " + user.connexion);
+            }
 
             if (data.first_connect < 1) {
                 $.ajax({
-                    url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/firstconnect',
+                    url: apiHost+'/xeno/users/firstconnect/me',
                     type: 'PUT',
                     beforeSend: setHeader
                 });
@@ -512,7 +517,7 @@
 
 
         if (password_inscription == password_repeat_inscription) {
-            $.post("http://adrien.dallinge.ch/cave/wp-json/xeno/users/native",
+            $.post(apiHost+"/xeno/users/native",
                 {
                     login: login_inscription,
                     password: password_inscription,
@@ -544,7 +549,7 @@
         var login_native = $("#login_native").val();
         var password_native = $("#password_native").val();
         if (login_native.length > 0 && password_native.length > 0) {
-            $.post("http://adrien.dallinge.ch/cave/wp-json/jwt-auth/v1/token", {
+            $.post(apiHost+"/jwt-auth/v1/token", {
                 username: login_native,
                 password: password_native
             }, function (reponse) {

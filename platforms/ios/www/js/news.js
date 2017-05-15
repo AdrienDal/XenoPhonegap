@@ -6,7 +6,6 @@ myApp.onPageInit('newsDetails',function (page) {
 });
 
 function initNewsDetailsPage(id) {
-		var apiHost = 'http://adrien.dallinge.ch/cave/wp-json';
         $.get(apiHost + '/wp/v2/posts/'+id).then(function (response) {
 			$('#nomNews').html(response.title.rendered);
 			$('#dateNews').html(convertDate(new Date(response.date)));
@@ -17,7 +16,7 @@ function initNewsDetailsPage(id) {
 
 function initNewsPage () {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/news?',
+        url: apiHost+'/xeno/users/news?',
         type: 'GET',
         dataType: 'json',
         beforeSend: setHeader

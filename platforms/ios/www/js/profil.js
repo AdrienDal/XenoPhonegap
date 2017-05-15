@@ -7,7 +7,12 @@ myApp.onPageInit('profil', function (page) {
 function initUserPage () {
     $("#nameUserProfil").html(user.name);
     $("#imgUserProfil").prop('src',"./img/avatar/"+user.thumbnail+".png");
-    $("#viaUserProfil").html("via " + user.connexion);
+
+    if (user.role == "administrator" || user.role == "bbp_moderator") {
+        $("#viaUserProfil").html("rôle " + user.role);
+    }else {
+        $("#viaUserProfil").html("via " + user.connexion);
+    }
  }
 
 function changeColorTheme(btn,color) {
@@ -58,7 +63,7 @@ function updateProfil(){
     }
 
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/me',
+        url: apiHost+'/xeno/users/me',
         type: 'PUT',
         dataType: 'json',
         data: {"login": login_update, "image":  user.thumbnail, "boolpassword" : bool_password ,"email" : email, "password" : password_update },

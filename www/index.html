@@ -470,14 +470,19 @@
             user.connexion = data.connexion;
             user.email = data.email;
             user.id = data.id_user;
+            user.role = data.role;
 
             $("#nameUser").html(user.name);
             $("#imgUser").prop('src', "./img/avatar/" + user.thumbnail + ".png");
-            $("#viaUser").html("via " + user.connexion);
+            if (user.role == "administrator" || user.role == "bbp_moderator") {
+                $("#viaUser").html("rôle " + user.role);
+            }else {
+                $("#viaUser").html("via " + user.connexion);
+            }
 
             if (data.first_connect < 1) {
                 $.ajax({
-                    url: apiHost+'/xeno/users/firstconnect',
+                    url: apiHost+'/xeno/users/firstconnect/me',
                     type: 'PUT',
                     beforeSend: setHeader
                 });

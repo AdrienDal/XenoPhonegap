@@ -66,9 +66,9 @@ function initMesJeuxPage () {
 
 function addToFavorite(li) {
     $.ajax({
-        url: apiHost+'/xeno/users/addfav',
+        url: apiHost+'/xeno/users/favoris',
         type: 'POST',
-        data : {jeuId : li.attr('tag')},
+        data : {jeu : li.attr('tag')},
         beforeSend: setHeader
     });
     li.addClass("fav");

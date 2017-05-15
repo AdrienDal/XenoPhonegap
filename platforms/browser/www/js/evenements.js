@@ -12,7 +12,7 @@ myApp.onPageInit('evenementsInscriptions', function (page) {
 
 function initlisteInscriptionPage (id) {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/listeinscritevent/'+id,
+        url: apiHost+'/xeno/users/events/'+id+'/inscriptions',
         type: 'GET',
         dataType: 'json',
         beforeSend: setHeader
@@ -39,7 +39,6 @@ function initlisteInscriptionPage (id) {
 }
 
 function initEvenementsDetailsPage(id,inscrit) {
-		var apiHost = 'http://adrien.dallinge.ch/cave/wp-json';
         $.get(apiHost + '/wp/v2/tribe_events/'+id).then(function (response) {
         	var date=new Date(response.startDate);
 			$('#nomEvent').html(response.title.rendered);
@@ -61,7 +60,7 @@ function initEvenementsDetailsPage(id,inscrit) {
 
 function setNombreInscrits(id){
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/listeinscritevent/'+id,
+        url: apiHost+'/xeno/users/events/'+id+'/inscriptions',
         type: 'GET',
         dataType: 'json',
         beforeSend: setHeader
@@ -81,7 +80,7 @@ function setNombreInscrits(id){
 
 function initEvenementsPage () {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/events',
+        url: apiHost+'/xeno/users/events',
         type: 'GET',
         dataType: 'json',
         beforeSend: setHeader
@@ -144,10 +143,9 @@ function inscription(){
     var idEvent = $("#linkViewList").attr('tag');
     if (btnInscription.hasClass("button-fill")){
         $.ajax({
-            url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/inscription',
+            url: apiHost+'/xeno/users/events/'+idEvent+'/inscriptions',
             type: 'POST',
             dataType: 'json',
-            data:{"event": idEvent},
             beforeSend: setHeader
         }) .done(function(){
             setNombreInscrits(idEvent);
@@ -156,7 +154,7 @@ function inscription(){
         btnInscription.html("Inscrit");
     }else{
         $.ajax({
-            url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/desinscription?' +$.param({"event": idEvent}),
+            url: apiHost+'/xeno/users/events/'+idEvent+'/inscriptions/me',
             type: 'DELETE',
             dataType: 'json',
             beforeSend: setHeader

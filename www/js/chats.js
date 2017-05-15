@@ -32,6 +32,8 @@ function initChatsPage(id,title) {
 }
 
 function getLastMessages(async) {
+    if (loadMessageProcess) return;
+    loadMessageProcess = true;
     var chatMessages = [];
     $.ajax({
         url: apiHost+'/xeno/users/chats/'+idpost+'/messages/last?premier='+idDernierMsg+'&nombre=30',
@@ -45,7 +47,7 @@ function getLastMessages(async) {
                 chatMessages.push({
                     text: value.message_texte,
                     date: value.message_datetime,
-                    name: value.display_name,
+                    name: value.user_login,
                     avatar: "./img/avatar/"+value.image+".png",
                     id : value.id_message,
                     type: (user.id == value.id_user) ? 'sent' : 'received'
@@ -55,6 +57,7 @@ function getLastMessages(async) {
             idDernierMsg = response[response.length - 1].id_message;
             myMessages.addMessages(chatMessages);
         }
+        loadMessageProcess = false;
     });
 }
 
@@ -97,6 +100,11 @@ function envoieMsg() {
         data: {"message": messageText},
         beforeSend: setHeader
     }).done(function(response) {
+        if (response < 0){
+            myApp.alert("Vous n'êtes pas autorisé à écrire un message (cause : ban)","Information");
+            interval = setInterval(function(){getLastMessages(idpost,true)}, 5000);
+            return;
+        }
         idDernierMsg = response;
         myMessages.addMessage({
             text: messageText,
@@ -166,6 +174,18 @@ function showOrHideFavChats(favoris) {
 }
 
 
+function deleteMsg(msgtodel,idmsg,ban) {
+    $.ajax({
+        url: apiHost+'/xeno/users/chats/' +idpost + '/messages/'+idmsg+'?ban=1',
+        type: 'DELETE',
+        dataType: 'json',
+        beforeSend: setHeader
+    }) .done(function(){
+        $(msgtodel).fadeOut();
+    });
+}
+
+//******************************** SUPPRIMER MES MESSAGES *************************************//
 
 $(document).on('touchstart',"div.message-sent > div.message-text", function (event){
     if ($(event.target).hasClass('message-sent')) {
@@ -188,14 +208,59 @@ $(document).on("taphold","div.message-sent > div.message-text",function (event){
         var idmsg = $(msgtodel).attr('tag');
         myApp.confirm('êtes-vous sûr?', 'Supprimer le message : '+ $(msgtodel).html(),
             function () {
-                $.ajax({
-                    url: apiHost+'/xeno/users/chats/' +idpost + '/messages/'+ idmsg,
-                    type: 'DELETE',
-                    dataType: 'json',
-                    beforeSend: setHeader
-                }) .done(function(){
-                    $(msgtodel).fadeOut();
-                });
+                deleteMsg(msgtodel,idmsg,0);
             }
         );
 });
+
+//********************************** MODE ADMINISTRATEUR - MODERATEUR ***************************************//
+
+$(document).on('touchstart',"div.message-received > div.message-text", function (event){
+    if (user.role != "administrator" && user.role != "bbp_moderator")
+        return;
+    if ($(event.target).hasClass('message-received')) {
+        var msgtodel = event.currentTarget;
+    } else {
+        var msgtodel = event.currentTarget.parentNode;
+    }
+    $(msgtodel).append("<img src='./img/loader.gif' width='120' id='loaderMsg' style='position : absolute;margin-left : -45px; margin-top : -74px;' />");
+}).on('touchend',"div.message-received", function(){
+    $("#loaderMsg").remove();
+});
+
+$(document).on("taphold","div.message-received > div.message-text",function (event){
+    if (user.role != "administrator" && user.role != "bbp_moderator")
+        return;
+    $("#loaderMsg").remove();
+    if ($(event.target).hasClass('message-received')) {
+        var msgtodel = event.currentTarget;
+    } else {
+        var msgtodel = event.currentTarget.parentNode;
+    }
+    var idmsg = $(msgtodel).attr('tag');
+
+    myApp.modal({
+        title:  'Moderation',
+        text: "Message sélectionné : "+ $(msgtodel).html(),
+        verticalButtons: true,
+        buttons: [
+            {
+                text: '<span >Supprimer le message</span>',
+                onClick: function() {
+                    deleteMsg(msgtodel,idmsg,0);
+                }
+            },{
+                text: '<span style="font-size : 11px;">Supprimer le message et bannir le compte</span>',
+                onClick: function() {
+                    deleteMsg(msgtodel,idmsg,1);
+                }
+            },{
+                text: 'Cancel',
+                onClick: function() {
+                    return;
+                }
+            }
+        ]
+    })
+});
+

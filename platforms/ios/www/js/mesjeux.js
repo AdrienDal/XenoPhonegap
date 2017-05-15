@@ -7,7 +7,6 @@ myApp.onPageInit('jeuxDetails',function (page) {
 });
 
 function initJeuxDetailsPage(id,favdetail) {
-    var apiHost = 'http://adrien.dallinge.ch/cave/wp-json';
     $.get(apiHost + '/wp/v2/xenogame/'+id).then(function (response) {
         $('#nomJeu').html(response.title.rendered);
         $('#infoJeu').html("Joueur(s) : de "+response.player_min+ " à "+response.player_max);
@@ -19,7 +18,7 @@ function initJeuxDetailsPage(id,favdetail) {
 
 function initMesJeuxPage () {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/jeux',
+        url: apiHost+'/xeno/users/jeux',
         type: 'GET',
         dataType: 'json',
         beforeSend: setHeader
@@ -67,9 +66,9 @@ function initMesJeuxPage () {
 
 function addToFavorite(li) {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/addfav',
+        url: apiHost+'/xeno/users/favoris',
         type: 'POST',
-        data : {jeuId : li.attr('tag')},
+        data : {jeu : li.attr('tag')},
         beforeSend: setHeader
     });
     li.addClass("fav");
@@ -83,7 +82,7 @@ function addToFavorite(li) {
 
 function delFromFavorite(li) {
     $.ajax({
-        url: 'http://adrien.dallinge.ch/cave/wp-json/xeno/users/remfav?' +$.param({"jeuId":  li.attr('tag')}),
+        url: apiHost+'/xeno/users/favoris/' +li.attr('tag'),
         type: 'DELETE',
         beforeSend: setHeader
     });
