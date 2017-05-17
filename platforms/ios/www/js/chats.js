@@ -56,15 +56,16 @@ function getLastMessages(async) {
             if (idPremierMsg == -1) idPremierMsg = response[0].id_message;
             idDernierMsg = response[response.length - 1].id_message;
             myMessages.addMessages(chatMessages);
+            if (response.length < 30) {
+                $("#btnAncienMsg").remove();
+            }
         }
         loadMessageProcess = false;
     });
 }
 
 function getBeforeMessages(async) {
-    if (loadMessageProcess) return;
     var chatMessages = [];
-    loadMessageProcess = true;
     $.ajax({
         url: apiHost+'/xeno/users/chats/'+idpost+'/messages?premier='+idPremierMsg+'&nombre=10',
         type: 'GET',
@@ -85,37 +86,42 @@ function getBeforeMessages(async) {
             idPremierMsg = response[response.length - 1].id_message;
             if (response.length < 10) $("#btnAncienMsg").remove();
             $(".page-content").animate({ scrollTop: 0});
-            loadMessageProcess = false;
     });
 }
 
 function envoieMsg() {
-    clearInterval(interval);
-    var messageText = $("#tAMessage").val().trim();
-    $("#tAMessage").val('');
-    $.ajax({
-        url: apiHost+'/xeno/users/chats/'+idpost+'/messages',
-        type: 'POST',
-        dataType: 'json',
-        data: {"message": messageText},
-        beforeSend: setHeader
-    }).done(function(response) {
-        if (response < 0){
-            myApp.alert("Vous n'êtes pas autorisé à écrire un message (cause : ban)","Information");
-            interval = setInterval(function(){getLastMessages(idpost,true)}, 5000);
-            return;
-        }
-        idDernierMsg = response;
-        myMessages.addMessage({
-            text: messageText,
-            type: 'sent',
-            avatar: "./img/avatar/"+user.thumbnail+".png",
-            date: "à l'instant",
-            name: user.name,
-            id : idDernierMsg,
-        }, 'append', true);
-        interval = setInterval(function(){getLastMessages(idpost,true)}, 5000);
-    });
+    if ($("#tAMessage").val().trim().length > 0) {
+        clearInterval(interval);
+        var messageText = $("#tAMessage").val().trim();
+        $("#tAMessage").val('');
+        $.ajax({
+            url: apiHost + '/xeno/users/chats/' + idpost + '/messages',
+            type: 'POST',
+            dataType: 'json',
+            data: {"message": messageText},
+            beforeSend: setHeader
+        }).done(function (response) {
+            if (response < 0) {
+                myApp.alert("Vous n'êtes pas autorisé à écrire un message (cause : ban)", "Information");
+                interval = setInterval(function () {
+                    getLastMessages(idpost, true)
+                }, 5000);
+                return;
+            }
+            idDernierMsg = response;
+            myMessages.addMessage({
+                text: messageText,
+                type: 'sent',
+                avatar: "./img/avatar/" + user.thumbnail + ".png",
+                date: "à l'instant",
+                name: user.name,
+                id: idDernierMsg,
+            }, 'append', true);
+            interval = setInterval(function () {
+                getLastMessages(idpost, true)
+            }, 5000);
+        });
+    }
 }
 
 function initListeChatsPage() {

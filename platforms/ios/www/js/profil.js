@@ -10,6 +10,7 @@ function initUserPage () {
 
     if (user.role == "administrator" || user.role == "bbp_moderator") {
         $("#viaUserProfil").html("rôle " + user.role);
+        initBanList();
     }else {
         $("#viaUserProfil").html("via " + user.connexion);
     }
@@ -95,3 +96,37 @@ function updateProfil(){
         alert(error);
     });
 }
+
+//********************** PARTIE MODERATION ********************** //
+
+function initBanList() {
+    $.ajax({
+        url: apiHost+'/xeno/users/bannis',
+        type: 'GET',
+        dataType: 'json',
+        beforeSend: setHeader
+    }).done(function (response) {
+        $("#listviewBan").html("");
+        $.each(response, function (key, value) {
+            $("#listviewBan").append("" +
+                '<li class="swipeout ban" tag="'+value.ID+'">' +
+                '<div class="swipeout-content item-content">' +
+                '<div class="item-inner">'+value.user_login+'</div>' +
+                '<div class="swipeout-actions-right">' +
+                '<a href="#" class="swipeout-delete" data-confirm="êtes-vous sûr de vouloir débannir ce compte?" data-confirm-title="Confirmation" data-close-on-cancel="true">Débannir</a>' +
+                '</div>' +
+                '</div>' +
+                '</li>' +
+                "");
+        })
+        $$('.swipeout').on('swipeout:deleted', function () {
+            $.ajax({
+                url: apiHost+'/xeno/users/'+$(this).attr('tag')+'/unban',
+                type: 'PUT',
+                dataType: 'json',
+                beforeSend: setHeader
+            });
+        });
+    });
+}
+
