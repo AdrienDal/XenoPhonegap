@@ -186,8 +186,12 @@ function deleteMsg(msgtodel,idmsg,ban) {
         type: 'DELETE',
         dataType: 'json',
         beforeSend: setHeader
-    }) .done(function(){
-        $(msgtodel).fadeOut();
+    }) .done(function(reponse){
+        if (reponse != false) {
+            $(msgtodel).fadeOut();
+        }else {
+            myApp.alert("Impossible de supprimer ce message","Information");
+        }
     });
 }
 

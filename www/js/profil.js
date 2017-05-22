@@ -13,6 +13,7 @@ function initUserPage () {
         initBanList();
     }else {
         $("#viaUserProfil").html("via " + user.connexion);
+        $("#listBlockBan").css('display','none');
     }
  }
 
@@ -106,7 +107,7 @@ function initBanList() {
         dataType: 'json',
         beforeSend: setHeader
     }).done(function (response) {
-        $("#listviewBan").html("");
+        $("#listBlockBan").css('display','block');
         $.each(response, function (key, value) {
             $("#listviewBan").append("" +
                 '<li class="swipeout ban" tag="'+value.ID+'">' +
