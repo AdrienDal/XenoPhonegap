@@ -40,5 +40,4 @@ function initNewsPage () {
             $("#loader").remove();
             $("#listViewNews").fadeIn();
         })
-        
 }

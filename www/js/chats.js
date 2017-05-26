@@ -182,7 +182,7 @@ function showOrHideFavChats(favoris) {
 
 function deleteMsg(msgtodel,idmsg,ban) {
     $.ajax({
-        url: apiHost+'/xeno/users/chats/' +idpost + '/messages/'+idmsg+'?ban=1',
+        url: apiHost+'/xeno/users/chats/' +idpost + '/messages/'+idmsg+'?ban='+ban,
         type: 'DELETE',
         dataType: 'json',
         beforeSend: setHeader

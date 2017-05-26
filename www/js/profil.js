@@ -56,7 +56,7 @@ function updateProfil(){
     var bool_password = false;
 
     if ( password_update.length > 0) {
-        if (password_update == password_repeat_update) {
+        if ((password_update == password_repeat_update) && (password_update.length > 3)) {
             bool_password = true;
         }else {
             myApp.alert("Mots de passe différents", "Erreur");
