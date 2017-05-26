@@ -5,34 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0eb789cf-ae93-441c-a62a-ad47f3dab401" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/assets/www/img/avatar_default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/assets/www/img/contacts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/browser/www/img/avatar_default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/browser/www/img/contacts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/img/avatar_default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/ios/www/img/contacts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/avatar_default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/contacts.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/chats.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/chats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/news.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/news.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/profil.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/profil.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/profil.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/profil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/chats.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/chats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/news.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/news.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/profil.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/profil.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/profil.html" afterPath="$PROJECT_DIR$/platforms/browser/www/profil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/chats.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/chats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/news.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/news.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/profil.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/profil.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/profil.html" afterPath="$PROJECT_DIR$/platforms/ios/www/profil.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/chats.js" afterPath="$PROJECT_DIR$/www/js/chats.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/connexion.js" afterPath="$PROJECT_DIR$/www/js/connexion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/news.js" afterPath="$PROJECT_DIR$/www/js/news.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/profil.js" afterPath="$PROJECT_DIR$/www/js/profil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -124,14 +97,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mesjeux.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mesjeux.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/js/mesjeux.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <marker date="1494768124343" expanded="true" signature="609:624" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="118" column="15" lean-forward="false" selection-start-line="118" selection-start-column="15" selection-end-line="118" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,16 +124,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newsDetails.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/newsDetails.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -239,7 +212,6 @@
         <option value="$PROJECT_DIR$/www/listechats.html" />
         <option value="$PROJECT_DIR$/www/bower_components/framework7/src/js/messages.js" />
         <option value="$PROJECT_DIR$/www/css/xeno.css" />
-        <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/www/redirect.html" />
         <option value="$PROJECT_DIR$/www/js/contacts.js" />
         <option value="$PROJECT_DIR$/www/js/evenements.js" />
@@ -251,6 +223,7 @@
         <option value="$PROJECT_DIR$/www/js/news.js" />
         <option value="$PROJECT_DIR$/www/js/chats.js" />
         <option value="$PROJECT_DIR$/www/js/profil.js" />
+        <option value="$PROJECT_DIR$/config.xml" />
       </list>
     </option>
   </component>
@@ -264,8 +237,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-3" />
-    <option name="y" value="10" />
+    <option name="x" value="3" />
     <option name="width" value="1604" />
     <option name="height" value="867" />
   </component>
@@ -284,8 +256,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -408,6 +378,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -620,14 +592,15 @@
       <workItem from="1495453675267" duration="5417000" />
       <workItem from="1495582108426" duration="879000" />
       <workItem from="1495637966173" duration="87000" />
+      <workItem from="1495821279695" duration="107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340727000" />
+    <option name="totallyTimeSpent" value="340834000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="10" width="1604" height="867" extended-state="0" />
+    <frame x="3" y="0" width="1604" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2141058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -769,14 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -977,10 +942,18 @@
     <entry file="file://$PROJECT_DIR$/www/js/mesjeux.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
             <marker date="1494768124343" expanded="true" signature="609:624" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="118" column="15" lean-forward="false" selection-start-line="118" selection-start-column="15" selection-end-line="118" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

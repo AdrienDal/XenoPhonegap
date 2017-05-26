@@ -117,5 +117,4 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <plugin name="im.ltdev.cordova.UserAgent" spec="https://github.com/LouisT/cordova-useragent" />
 </widget>
