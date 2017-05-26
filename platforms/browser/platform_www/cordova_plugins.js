@@ -670,7 +670,8 @@ module.exports.metadata =
     "com.teamnemitoff.phonedialer": "0.3.0",
     "cordova-plugin-googlemaps": "1.4.0",
     "cordova-plugin-email-composer": "0.8.3",
-    "im.ltdev.cordova.UserAgent": "0.1.0"
+    "im.ltdev.cordova.UserAgent": "0.1.0",
+    "cordova-build-architecture": "1.0.1"
 }
 // BOTTOM OF METADATA
 });

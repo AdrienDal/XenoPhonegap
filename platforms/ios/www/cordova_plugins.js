@@ -482,7 +482,8 @@ module.exports.metadata =
     "cordova-plugin-globalization": "1.0.5",
     "cordova-plugin-email-composer": "0.8.3",
     "cordova-plugin-whitelist": "1.2.2",
-    "im.ltdev.cordova.UserAgent": "0.1.0"
+    "im.ltdev.cordova.UserAgent": "0.1.0",
+    "cordova-build-architecture": "1.0.1"
 };
 // BOTTOM OF METADATA
 });

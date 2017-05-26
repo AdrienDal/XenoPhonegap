@@ -106,6 +106,9 @@
         },
         "im.ltdev.cordova.UserAgent": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-build-architecture": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {},
@@ -778,6 +781,7 @@
         "com.teamnemitoff.phonedialer": "0.3.0",
         "cordova-plugin-googlemaps": "1.4.0",
         "cordova-plugin-email-composer": "0.8.3",
-        "im.ltdev.cordova.UserAgent": "0.1.0"
+        "im.ltdev.cordova.UserAgent": "0.1.0",
+        "cordova-build-architecture": "1.0.1"
     }
 }

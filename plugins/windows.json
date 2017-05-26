@@ -1,0 +1,94 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.teamnemitoff.phonedialer": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-build-architecture": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-googlemaps": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "im.ltdev.cordova.UserAgent": {
+            "PACKAGE_NAME": "Hello World"
+        }
+    },
+    "dependent_plugins": {
+        "com.googlemaps.ios": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "Hello World"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "Hello World"
+        }
+    }
+}

@@ -121,4 +121,5 @@
     <preference name="CameraUsesGeolocation" value="false" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="windows-target-version" value="10.0" />
 </widget>

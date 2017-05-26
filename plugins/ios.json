@@ -51,6 +51,9 @@
         },
         "im.ltdev.cordova.UserAgent": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-build-architecture": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
     "dependent_plugins": {
