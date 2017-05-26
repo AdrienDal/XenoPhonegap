@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/www/index.html" description="&#10;" line="401" />
+    <bookmark url="file://$PROJECT_DIR$/www/index.html" description="&#10;" line="400" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0eb789cf-ae93-441c-a62a-ad47f3dab401" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/profil.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/profil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/config.xml" afterPath="$PROJECT_DIR$/platforms/browser/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/config.xml" afterPath="$PROJECT_DIR$/platforms/browser/www/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/browser/www/js/profil.js" afterPath="$PROJECT_DIR$/platforms/browser/www/js/profil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/Hello World/config.xml" afterPath="$PROJECT_DIR$/platforms/ios/Hello World/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/index.html" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/profil.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/profil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,15 +37,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3434">
-              <caret line="202" column="35" lean-forward="false" selection-start-line="202" selection-start-column="35" selection-end-line="202" selection-end-column="35" />
+            <state relative-caret-position="119">
+              <caret line="7" column="119" lean-forward="false" selection-start-line="7" selection-start-column="119" selection-end-line="7" selection-end-column="119" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#span#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1495282231035" expanded="true" signature="14748:14770" ph="..." />
+                <marker date="1495828512960" expanded="true" signature="14735:14757" ph="..." />
               </folding>
             </state>
           </provider>
@@ -109,7 +120,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="499">
@@ -125,18 +136,6 @@
             <state relative-caret-position="153">
               <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/news.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-              <folding>
-                <marker date="1495443684737" expanded="true" signature="1088:1163" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -218,12 +217,12 @@
         <option value="$PROJECT_DIR$/www/js/mesjeux.js" />
         <option value="$PROJECT_DIR$/www/chats.html" />
         <option value="$PROJECT_DIR$/www/profil.html" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/js/connexion.js" />
         <option value="$PROJECT_DIR$/www/js/news.js" />
         <option value="$PROJECT_DIR$/www/js/chats.js" />
         <option value="$PROJECT_DIR$/www/js/profil.js" />
         <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/www/index.html" />
       </list>
     </option>
   </component>
@@ -592,12 +591,12 @@
       <workItem from="1495453675267" duration="5417000" />
       <workItem from="1495582108426" duration="879000" />
       <workItem from="1495637966173" duration="87000" />
-      <workItem from="1495821279695" duration="1596000" />
+      <workItem from="1495821279695" duration="2990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342323000" />
+    <option name="totallyTimeSpent" value="343717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="0" width="1604" height="867" extended-state="0" />
@@ -634,7 +633,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/inscription.html" />
     <entry file="file://$PROJECT_DIR$/../../lancyview.css" />
     <entry file="file://$PROJECT_DIR$/plugins/cordova-plugin-googlemaps/www/googlemaps-cdv-plugin.js" />
     <entry file="file://$PROJECT_DIR$/../../imagesloaded.pkgd.min.js">
@@ -880,18 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3434">
-          <caret line="202" column="35" lean-forward="false" selection-start-line="202" selection-start-column="35" selection-end-line="202" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1495282231035" expanded="true" signature="14748:14770" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/chats.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4216">
@@ -954,6 +940,26 @@
         <state relative-caret-position="499">
           <caret line="32" column="72" lean-forward="false" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/projet jvc/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="119" lean-forward="false" selection-start-line="7" selection-start-column="119" selection-end-line="7" selection-end-column="119" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1495828512960" expanded="true" signature="14735:14757" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
