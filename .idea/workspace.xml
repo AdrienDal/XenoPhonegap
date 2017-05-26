@@ -112,8 +112,8 @@
       <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="85" column="54" lean-forward="false" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+            <state relative-caret-position="221">
+              <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -581,12 +581,12 @@
       <workItem from="1495582108426" duration="879000" />
       <workItem from="1495637966173" duration="87000" />
       <workItem from="1495821279695" duration="3388000" />
-      <workItem from="1495830009099" duration="773000" />
+      <workItem from="1495830009099" duration="927000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="344888000" />
+    <option name="totallyTimeSpent" value="345042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="0" width="1604" height="867" extended-state="0" />
@@ -942,8 +942,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="85" column="54" lean-forward="false" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+        <state relative-caret-position="221">
+          <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
           <folding />
         </state>
       </provider>

@@ -11,6 +11,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="windows-arch" value="arm" />
     <plugin name="cordova-build-architecture" source="git" spec="https://github.com/MBuchalik/cordova-build-architecture.git#v1.0.1" />
     <preference name="windows-target-version" value="10.0" />
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
@@ -83,7 +84,6 @@
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
     </platform>
     <platform name="windows">
-        <preference name="windows-arch" value="arm" />
         <icon height="150" platform="windows" src="www/res/icon/windows/Square150x150Logo.scale-100.png" width="150" />
         <icon height="30" platform="windows" src="www/res/icon/windows/Square30x30Logo.scale-100.png" width="30" />
         <icon height="50" platform="windows" src="www/res/icon/windows/StoreLogo.scale-100.png" width="50" />
