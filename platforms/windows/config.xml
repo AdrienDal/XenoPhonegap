@@ -34,5 +34,6 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="windows-arch" value="arm" />
     <preference name="windows-target-version" value="10.0" />
 </widget>

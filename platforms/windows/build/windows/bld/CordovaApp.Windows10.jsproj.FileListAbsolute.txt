@@ -1,0 +1,2 @@
+C:\Users\Adrien HEG\Desktop\phonegap\xeno\platforms\windows\build\windows\release\arm\win10\GlobalizationProxy.winmd
+C:\Users\Adrien HEG\Desktop\phonegap\xeno\platforms\windows\build\windows\bld\CordovaApp.Windows10.jsprojResolveAssemblyReference.cache
